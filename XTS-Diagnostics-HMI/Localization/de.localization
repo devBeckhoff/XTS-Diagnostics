@@ -1,0 +1,16 @@
+{
+  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.431/runtimes/native1.12-tchmi/Schema/LocalizationDescription.Schema.json",
+  "locale": "de",
+  "localizedText": {
+    "L_XTSViewer": "XTS Viewer",
+    "L_XTSDiagnostics": "XTS Diagnostics",
+    "L_IPCDiagnostics": "IPC Diagnostics",
+    "L_EtherCATDiagnostics": "EtherCAT Diagnostics",
+    "L_SystemDiagnostics": "System Diagnostics",
+    "L_ExtraPage1": "Extra Page 1",
+    "L_ExtraPage2": "Extra Page 2",
+    "L_Localization": "Lokalisierung",
+    "L_Theme": "Farbschema",
+    "L_Settings": "Einstellungen"
+  }
+}
