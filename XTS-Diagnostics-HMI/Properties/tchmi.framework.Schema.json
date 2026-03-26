@@ -16035,6 +16035,1627 @@
       },
       "additionalProperties": false
     },
+    "TcHmi.XTS.Controls.XtsView": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "XtsView",
+      "frameworkControlNamespace": "TcHmi.XTS.Controls"
+    },
+    "Matrix": {
+      "title": "Matrix",
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        }
+      }
+    },
+    "BoolArray": {
+      "title": "BoolArray",
+      "type": "array",
+      "items": {
+        "type": "boolean"
+      }
+    },
+    "PartTransformations": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "Part Transformations",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "Part Transformation",
+        "propertiesMeta": [
+          {
+            "name": "ProcessingUnitIndex",
+            "category": "General",
+            "displayName": "ProcessingUnitIndex",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          },
+          {
+            "name": "PartIndex",
+            "category": "General",
+            "displayName": "PartIndex",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          },
+          {
+            "name": "OffsetX",
+            "category": "X-Transformation",
+            "displayName": "Offset",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          },
+          {
+            "name": "ValueScaleX",
+            "category": "X-Transformation",
+            "displayName": "ValueScale",
+            "defaultValue": 1,
+            "defaultValueInternal": 1
+          },
+          {
+            "name": "AxisBindingX",
+            "category": "X-Transformation",
+            "displayName": "AxisBinding",
+            "defaultValue": null,
+            "defaultValueInternal": null
+          },
+          {
+            "name": "OffsetY",
+            "category": "Y-Transformation",
+            "displayName": "Offset",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          },
+          {
+            "name": "ValueScaleY",
+            "category": "Y-Transformation",
+            "displayName": "ValueScale",
+            "defaultValue": 1,
+            "defaultValueInternal": 1
+          },
+          {
+            "name": "AxisBindingY",
+            "category": "Y-Transformation",
+            "displayName": "AxisBinding",
+            "defaultValue": null,
+            "defaultValueInternal": null
+          },
+          {
+            "name": "Rotation",
+            "category": "General",
+            "displayName": "Rotation",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          },
+          {
+            "name": "PartSide",
+            "category": "General",
+            "displayName": "PartSide",
+            "defaultValue": "Default",
+            "defaultValueInternal": "Default"
+          },
+          {
+            "name": "Visible",
+            "category": "General",
+            "displayName": "Visible",
+            "defaultValue": true,
+            "defaultValueInternal": true
+          }
+        ],
+        "properties": {
+          "ProcessingUnitIndex": {
+            "$ref": "tchmi:general#/definitions/UINT"
+          },
+          "PartIndex": {
+            "type": "number"
+          },
+          "OffsetX": {
+            "type": "number"
+          },
+          "ValueScaleX": {
+            "type": "number"
+          },
+          "AxisBindingX": {
+            "$ref": "tchmi:general#/definitions/LREAL"
+          },
+          "OffsetY": {
+            "type": "number"
+          },
+          "ValueScaleY": {
+            "type": "number"
+          },
+          "AxisBindingY": {
+            "$ref": "tchmi:general#/definitions/LREAL"
+          },
+          "Rotation": {
+            "type": "number"
+          },
+          "PartSide": {
+            "$ref": "tchmi:framework#/definitions/PartSide"
+          },
+          "Visible": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "XtsTools": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "XTS Tools",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "XTS Tool",
+        "propertiesMeta": [
+          {
+            "name": "ToolType",
+            "category": "General",
+            "displayName": "ToolType",
+            "defaultValue": "Image",
+            "defaultValueInternal": "Image"
+          },
+          {
+            "name": "MoverSide",
+            "category": "General",
+            "displayName": "MoverSide",
+            "defaultValue": "Front",
+            "defaultValueInternal": "Front"
+          },
+          {
+            "name": "ImageSrc",
+            "category": "Image",
+            "displayName": "ImageSource",
+            "defaultValue": "",
+            "defaultValueInternal": ""
+          },
+          {
+            "name": "ProcessingUnitIndex",
+            "category": "Mover Identification",
+            "displayName": "ProcessingUnitIndex",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          },
+          {
+            "name": "IdentificationMode",
+            "category": "Mover Identification",
+            "displayName": "MoverIdentificationMode",
+            "defaultValue": "All",
+            "defaultValueInternal": "All"
+          },
+          {
+            "name": "IdentificationId",
+            "category": "Mover Identification",
+            "displayName": "MoverIdentification",
+            "defaultValue": "",
+            "defaultValueInternal": ""
+          },
+          {
+            "name": "OffsetX",
+            "category": "Transformation",
+            "displayName": "OffsetX",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          },
+          {
+            "name": "OffsetY",
+            "category": "Transformation",
+            "displayName": "OffsetY",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          },
+          {
+            "name": "ImageWidth",
+            "category": "Image",
+            "displayName": "ImageWidth",
+            "defaultValue": null,
+            "defaultValueInternal": null
+          },
+          {
+            "name": "ImageHeight",
+            "category": "Image",
+            "displayName": "ImageHeight",
+            "defaultValue": null,
+            "defaultValueInternal": null
+          },
+          {
+            "name": "Rotation",
+            "category": "Transformation",
+            "displayName": "Rotation",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          },
+          {
+            "name": "Visible",
+            "category": "Transformation",
+            "displayName": "Visible",
+            "defaultValue": true,
+            "defaultValueInternal": true
+          },
+          {
+            "name": "zIndex",
+            "displayName": "zIndex",
+            "category": "Transformation",
+            "defaultValue": 11000,
+            "defaultValueInternal": 11000
+          },
+          {
+            "name": "TextType",
+            "category": "Text",
+            "displayName": "TextType",
+            "defaultValue": "Custom",
+            "defaultValueInternal": "Custom"
+          },
+          {
+            "name": "CustomText",
+            "category": "Text",
+            "displayName": "CustomText",
+            "defaultValue": "",
+            "defaultValueInternal": ""
+          },
+          {
+            "name": "TextOptions",
+            "category": "Text",
+            "displayName": "TextOptions",
+            "defaultValue": {
+              "FontStyle": "Normal",
+              "FontWeight": "Normal",
+              "FontFamily": "",
+              "HorizontalAlignment": "Left",
+              "VerticalAlignment": "Top",
+              "FontSize": 20,
+              "Color": {
+                "color": "black"
+              }
+            },
+            "defaultValueInternal": {
+              "FontStyle": "Normal",
+              "FontWeight": "Normal",
+              "FontFamily": "",
+              "HorizontalAlignment": "Left",
+              "VerticalAlignment": "Top",
+              "FontSize": 20,
+              "Color": {
+                "color": "black"
+              }
+            }
+          }
+        ],
+        "properties": {
+          "ToolType": {
+            "$ref": "tchmi:framework#/definitions/ToolType"
+          },
+          "MoverSide": {
+            "$ref": "tchmi:framework#/definitions/ModuleSide"
+          },
+          "ImageSrc": {
+            "$ref": "tchmi:framework#/definitions/Path"
+          },
+          "ProcessingUnitIndex": {
+            "$ref": "tchmi:general#/definitions/UINT"
+          },
+          "IdentificationId": {
+            "type": "string"
+          },
+          "IdentificationMode": {
+            "$ref": "tchmi:framework#/definitions/MoverIdentificationMode"
+          },
+          "OffsetX": {
+            "$ref": "tchmi:framework#/definitions/MeasurementValue"
+          },
+          "OffsetY": {
+            "$ref": "tchmi:framework#/definitions/MeasurementValue"
+          },
+          "ImageWidth": {
+            "$ref": "tchmi:framework#/definitions/MeasurementValue"
+          },
+          "ImageHeight": {
+            "$ref": "tchmi:framework#/definitions/MeasurementValue"
+          },
+          "Rotation": {
+            "$ref": "tchmi:framework#/definitions/MeasurementValue"
+          },
+          "Visible": {
+            "type": "boolean"
+          },
+          "zIndex": {
+            "type": "integer"
+          },
+          "TextType": {
+            "$ref": "tchmi:framework#/definitions/MoverTextType"
+          },
+          "TextOptions": {
+            "$ref": "tchmi:framework#/definitions/TextOptions"
+          },
+          "CustomText": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "XtsLayout": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "XtsLayout",
+      "type": "string",
+      "enum": [
+        "SystemView",
+        "InvertedSystemView",
+        "Custom"
+      ]
+    },
+    "MoverIdentificationMode": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "MoverIdentificationMode",
+      "type": "string",
+      "enum": [
+        "All",
+        "MoverId",
+        "MoverIndex"
+      ],
+      "id": "tchmi:framework#/definitions/MoverIdentificationMode"
+    },
+    "XtsInfoImages": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "XtsInfoImages",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "XtsInfoImage",
+        "propertiesMeta": [
+          {
+            "name": "ImageSrc",
+            "category": "General",
+            "displayName": "Image",
+            "defaultValue": "",
+            "defaultValueInternal": ""
+          },
+          {
+            "name": "View",
+            "category": "General",
+            "displayName": "View",
+            "defaultValue": "SystemView",
+            "defaultValueInternal": "SystemView"
+          },
+          {
+            "name": "PositionX",
+            "category": "Layout",
+            "displayName": "PositionX",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          },
+          {
+            "name": "PositionY",
+            "category": "Layout",
+            "displayName": "PositionY",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          },
+          {
+            "name": "Width",
+            "category": "Layout",
+            "displayName": "Width",
+            "defaultValue": null,
+            "defaultValueInternal": null
+          },
+          {
+            "name": "Height",
+            "category": "Layout",
+            "displayName": "Height",
+            "defaultValue": null,
+            "defaultValueInternal": null
+          },
+          {
+            "name": "Rotation",
+            "category": "Layout",
+            "displayName": "Rotation",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          },
+          {
+            "name": "Visible",
+            "category": "Layout",
+            "displayName": "Visible",
+            "defaultValue": true,
+            "defaultValueInternal": true
+          },
+          {
+            "name": "zIndex",
+            "category": "Layout",
+            "displayName": "zIndex",
+            "defaultValue": 1000,
+            "defaultValueInternal": 1000
+          }
+        ],
+        "properties": {
+          "ImageSrc": {
+            "$ref": "tchmi:framework#/definitions/Path"
+          },
+          "View": {
+            "$ref": "tchmi:framework#/definitions/XtsLayout"
+          },
+          "PositionX": {
+            "$ref": "tchmi:framework#/definitions/MeasurementValue"
+          },
+          "PositionY": {
+            "$ref": "tchmi:framework#/definitions/MeasurementValue"
+          },
+          "Width": {
+            "$ref": "tchmi:framework#/definitions/MeasurementValue"
+          },
+          "Height": {
+            "$ref": "tchmi:framework#/definitions/MeasurementValue"
+          },
+          "Rotation": {
+            "$ref": "tchmi:framework#/definitions/MeasurementValue"
+          },
+          "Visible": {
+            "type": "boolean"
+          },
+          "zIndex": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "PartSide": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "PartSide",
+      "type": "string",
+      "enum": [
+        "Default",
+        "Front",
+        "Back"
+      ]
+    },
+    "MoverTextType": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "MoverTextType",
+      "type": "string",
+      "enum": [
+        "Custom",
+        "MoverId",
+        "MoverIndex",
+        "MoverPosition"
+      ]
+    },
+    "ToolType": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "ToolType",
+      "type": "string",
+      "enum": [
+        "Image",
+        "Text"
+      ]
+    },
+    "ModuleSide": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "ModuleSide",
+      "type": "string",
+      "enum": [
+        "Front",
+        "Back"
+      ]
+    },
+    "XtsModuleList": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "XTS Module List",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "XTS Module",
+        "propertiesMeta": [
+          {
+            "name": "ProcessingUnitIndex",
+            "category": "General",
+            "displayName": "ProcessingUnitIndex",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          },
+          {
+            "name": "PartIndex",
+            "category": "General",
+            "displayName": "PartIndex",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          },
+          {
+            "name": "ModuleIndex",
+            "category": "General",
+            "displayName": "ModuleIndex",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          }
+        ],
+        "properties": {
+          "ProcessingUnitIndex": {
+            "$ref": "tchmi:general#/definitions/UINT"
+          },
+          "ModuleIndex": {
+            "$ref": "tchmi:general#/definitions/UINT"
+          },
+          "PartIndex": {
+            "$ref": "tchmi:general#/definitions/UINT"
+          }
+        }
+      }
+    },
+    "XtsMoverList": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "XTS Mover List",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "title": "XTS Mover",
+        "propertiesMeta": [
+          {
+            "name": "MoverIndex",
+            "category": "General",
+            "displayName": "MoverIndex",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          },
+          {
+            "name": "ProcessingUnitIndex",
+            "category": "General",
+            "displayName": "ProcessingUnitIndex",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          }
+        ],
+        "properties": {
+          "ProcessingUnitIndex": {
+            "$ref": "tchmi:general#/definitions/UINT"
+          },
+          "MoverIndex": {
+            "$ref": "tchmi:general#/definitions/UINT"
+          }
+        }
+      }
+    },
+    "SelectionMode": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "SelectionMode",
+      "type": "string",
+      "enum": [
+        "Off",
+        "SingleSelection",
+        "MultiSelection"
+      ]
+    },
+    "MarkerType": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "MarkerType",
+      "type": "string",
+      "enum": [
+        "None",
+        "Diamond",
+        "Tick"
+      ]
+    },
+    "StationText": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "StationText",
+      "type": "string",
+      "enum": [
+        "None",
+        "StationDescription",
+        "StationId"
+      ]
+    },
+    "TextOptions": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "title": "TextOptions",
+      "propertiesMeta": [
+        {
+          "name": "Color",
+          "displayName": "Color",
+          "defaultValue": {
+            "color": "Transparent"
+          },
+          "defaultValueInternal": {
+            "color": "Transparent"
+          }
+        },
+        {
+          "name": "FontStyle",
+          "displayName": "FontStyle",
+          "defaultValue": "Normal",
+          "defaultValueInternal": "Normal"
+        },
+        {
+          "name": "FontWeight",
+          "displayName": "FontWeight",
+          "defaultValue": "Normal",
+          "defaultValueInternal": "Normal"
+        },
+        {
+          "name": "FontFamily",
+          "displayName": "FontFamily",
+          "defaultValue": null,
+          "defaultValueInternal": null
+        },
+        {
+          "name": "HorizontalAlignment",
+          "displayName": "HorizontalAlignment",
+          "defaultValue": "Left",
+          "defaultValueInternal": "Left"
+        },
+        {
+          "name": "VerticalAlignment",
+          "displayName": "VerticalAlignment",
+          "defaultValue": "Top",
+          "defaultValueInternal": "Top"
+        },
+        {
+          "name": "FontSize",
+          "displayName": "FontSize",
+          "defaultValue": 20,
+          "defaultValueInternal": 20
+        }
+      ],
+      "properties": {
+        "Color": {
+          "$ref": "tchmi:framework#/definitions/SolidColor"
+        },
+        "FontStyle": {
+          "$ref": "tchmi:framework#/definitions/FontStyle"
+        },
+        "FontWeight": {
+          "$ref": "tchmi:framework#/definitions/FontWeight"
+        },
+        "FontFamily": {
+          "$ref": "tchmi:framework#/definitions/FontFamily"
+        },
+        "HorizontalAlignment": {
+          "$ref": "tchmi:framework#/definitions/HorizontalAlignment"
+        },
+        "VerticalAlignment": {
+          "$ref": "tchmi:framework#/definitions/VerticalAlignment"
+        },
+        "FontSize": {
+          "$ref": "tchmi:framework#/definitions/MeasurementValue"
+        }
+      }
+    },
+    "StationOptions": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "title": "StationOptions",
+      "propertiesMeta": [
+        {
+          "name": "Thickness",
+          "displayName": "Thickness",
+          "category": "Layout",
+          "defaultValue": 8,
+          "defaultValueInternal": 8
+        },
+        {
+          "name": "zIndex",
+          "displayName": "zIndex",
+          "category": "Layout",
+          "defaultValue": 1000,
+          "defaultValueInternal": 1000
+        },
+        {
+          "name": "Text",
+          "displayName": "Text",
+          "category": "Text",
+          "defaultValue": "None",
+          "defaultValueInternal": "None"
+        },
+        {
+          "name": "TextInfoBarPlacement",
+          "displayName": "TextInfoBarPlacement",
+          "category": "Text",
+          "defaultValue": "Left",
+          "defaultValueInternal": "Left"
+        },
+        {
+          "name": "TextDisplacement",
+          "displayName": "TextDisplacement",
+          "category": "Text",
+          "defaultValue": 10,
+          "defaultValueInternal": 10
+        },
+        {
+          "name": "TextOptions",
+          "displayName": "TextOptions",
+          "category": "Text",
+          "defaultValue": {
+            "FontStyle": "Normal",
+            "FontWeight": "Normal",
+            "FontFamily": "",
+            "HorizontalAlignment": "Left",
+            "VerticalAlignment": "Bottom",
+            "FontSize": 20
+          },
+          "defaultValueInternal": {
+            "FontStyle": "Normal",
+            "FontWeight": "Normal",
+            "FontFamily": "",
+            "HorizontalAlignment": "Left",
+            "VerticalAlignment": "Bottom",
+            "FontSize": 20
+          }
+        }
+      ],
+      "properties": {
+        "Thickness": {
+          "$ref": "tchmi:general#/definitions/UINT"
+        },
+        "zIndex": {
+          "type": "integer"
+        },
+        "Text": {
+          "$ref": "tchmi:framework#/definitions/StationText"
+        },
+        "TextInfoBarPlacement": {
+          "$ref": "tchmi:framework#/definitions/HorizontalAlignment"
+        },
+        "TextDisplacement": {
+          "type": "number"
+        },
+        "TextOptions": {
+          "$ref": "tchmi:framework#/definitions/TextOptions"
+        }
+      }
+    },
+    "MarkerText": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "MarkerText",
+      "type": "string",
+      "enum": [
+        "None",
+        "StopPosition"
+      ]
+    },
+    "MarkerOptions": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "title": "MarkerOptions",
+      "propertiesMeta": [
+        {
+          "name": "MarkerType",
+          "displayName": "MarkerType",
+          "category": "Layout",
+          "defaultValue": "None",
+          "defaultValueInternal": "None"
+        },
+        {
+          "name": "Size",
+          "displayName": "Size",
+          "category": "Layout",
+          "defaultValue": 20,
+          "defaultValueInternal": 20
+        },
+        {
+          "name": "Thickness",
+          "displayName": "Thickness",
+          "category": "Layout",
+          "defaultValue": 8,
+          "defaultValueInternal": 8
+        },
+        {
+          "name": "zIndex",
+          "displayName": "zIndex",
+          "category": "Layout",
+          "defaultValue": 1100,
+          "defaultValueInternal": 1100
+        },
+        {
+          "name": "Text",
+          "displayName": "Text",
+          "category": "Text",
+          "defaultValue": "None",
+          "defaultValueInternal": "None"
+        },
+        {
+          "name": "TextDisplacement",
+          "displayName": "TextDisplacement",
+          "category": "Text",
+          "defaultValue": 20,
+          "defaultValueInternal": 20
+        },
+        {
+          "name": "TextOptions",
+          "displayName": "TextOptions",
+          "category": "Text",
+          "defaultValue": {
+            "FontStyle": "Normal",
+            "FontWeight": "Normal",
+            "FontFamily": "",
+            "HorizontalAlignment": "Center",
+            "VerticalAlignment": "Bottom",
+            "FontSize": 20,
+            "Color": {
+              "color": "black"
+            }
+          },
+          "defaultValueInternal": {
+            "FontStyle": "Normal",
+            "FontWeight": "Normal",
+            "FontFamily": "",
+            "HorizontalAlignment": "Center",
+            "VerticalAlignment": "Bottom",
+            "FontSize": 20,
+            "Color": {
+              "color": "black"
+            }
+          }
+        }
+      ],
+      "properties": {
+        "MarkerType": {
+          "$ref": "tchmi:framework#/definitions/MarkerType"
+        },
+        "Size": {
+          "$ref": "tchmi:general#/definitions/UINT"
+        },
+        "Thickness": {
+          "$ref": "tchmi:general#/definitions/UINT"
+        },
+        "zIndex": {
+          "type": "integer"
+        },
+        "Text": {
+          "$ref": "tchmi:framework#/definitions/MarkerText"
+        },
+        "TextDisplacement": {
+          "type": "number"
+        },
+        "TextOptions": {
+          "$ref": "tchmi:framework#/definitions/TextOptions"
+        }
+      }
+    },
+    "DimensionOptions": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "title": "DimensionOptions",
+      "propertiesMeta": [
+        {
+          "name": "Displacement",
+          "displayName": "Displacement",
+          "category": "Layout",
+          "defaultValue": 100,
+          "defaultValueInternal": 100
+        },
+        {
+          "name": "InfoBarThickness",
+          "displayName": "Thickness",
+          "category": "Layout",
+          "defaultValue": 8,
+          "defaultValueInternal": 8
+        },
+        {
+          "name": "MarkerType",
+          "displayName": "MarkerType",
+          "category": "Layout",
+          "defaultValue": "Tick",
+          "defaultValueInternal": "Tick"
+        },
+        {
+          "name": "MarkerThickness",
+          "displayName": "MarkerThickness",
+          "category": "Layout",
+          "defaultValue": 5,
+          "defaultValueInternal": 5
+        },
+        {
+          "name": "MarkerSize",
+          "displayName": "MarkerSize",
+          "category": "Layout",
+          "defaultValue": 25,
+          "defaultValueInternal": 25
+        },
+        {
+          "name": "zIndex",
+          "displayName": "zIndex",
+          "category": "Layout",
+          "defaultValue": 1200,
+          "defaultValueInternal": 1200
+        },
+        {
+          "name": "TextPattern",
+          "displayName": "TextPattern",
+          "category": "Text",
+          "defaultValue": 2,
+          "defaultValueInternal": 2
+        },
+        {
+          "name": "TextDisplacement",
+          "displayName": "TextDisplacement",
+          "category": "Text",
+          "defaultValue": 10,
+          "defaultValueInternal": 10
+        },
+        {
+          "name": "TextOptions",
+          "displayName": "TextOptions",
+          "category": "Text",
+          "defaultValue": {
+            "FontStyle": "Normal",
+            "FontWeight": "Normal",
+            "FontFamily": "",
+            "HorizontalAlignment": "Center",
+            "VerticalAlignment": "Bottom",
+            "FontSize": 20,
+            "Color": {
+              "color": "#ff000000"
+            }
+          },
+          "defaultValueInternal": {
+            "FontStyle": "Normal",
+            "FontWeight": "Normal",
+            "FontFamily": "",
+            "HorizontalAlignment": "Center",
+            "VerticalAlignment": "Bottom",
+            "FontSize": 20,
+            "Color": {
+              "color": "#ff000000"
+            }
+          }
+        },
+        {
+          "name": "InfoBarColor",
+          "displayName": "InfoBarColor",
+          "defaultValue": {
+            "color": "#ff000000"
+          },
+          "defaultValueInternal": {
+            "color": "#ff000000"
+          }
+        },
+        {
+          "name": "MarkerColor",
+          "displayName": "MarkerColor",
+          "defaultValue": {
+            "color": "#ff000000"
+          },
+          "defaultValueInternal": {
+            "color": "#ff000000"
+          }
+        }
+      ],
+      "properties": {
+        "Displacement": {
+          "$ref": "tchmi:general#/definitions/UINT"
+        },
+        "InfoBarThickness": {
+          "$ref": "tchmi:general#/definitions/UINT"
+        },
+        "MarkerThickness": {
+          "$ref": "tchmi:general#/definitions/UINT"
+        },
+        "MarkerSize": {
+          "$ref": "tchmi:general#/definitions/UINT"
+        },
+        "MarkerType": {
+          "$ref": "tchmi:framework#/definitions/MarkerType"
+        },
+        "zIndex": {
+          "type": "integer"
+        },
+        "TextPattern": {
+          "$ref": "tchmi:general#/definitions/UINT"
+        },
+        "TextDisplacement": {
+          "type": "number"
+        },
+        "InfoBarColor": {
+          "$ref": "tchmi:framework#/definitions/SolidColor"
+        },
+        "MarkerColor": {
+          "$ref": "tchmi:framework#/definitions/SolidColor"
+        },
+        "TextOptions": {
+          "$ref": "tchmi:framework#/definitions/TextOptions"
+        }
+      }
+    },
+    "XtsInfoBars": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "array",
+      "title": "XtsInfoBars",
+      "items": {
+        "type": "object",
+        "title": "XtsInfoBar",
+        "propertiesMeta": [
+          {
+            "name": "ProcessingUnitIndex",
+            "displayName": "ProcessingUnitIndex",
+            "category": "General",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          },
+          {
+            "name": "PartIndex",
+            "displayName": "PartIndex",
+            "category": "General",
+            "defaultValue": 0,
+            "defaultValueInternal": 0
+          },
+          {
+            "name": "PartStartPosition",
+            "displayName": "PartStartPosition",
+            "category": "General",
+            "defaultValue": 10,
+            "defaultValueInternal": 10
+          },
+          {
+            "name": "PartEndPosition",
+            "displayName": "PartEndPosition",
+            "category": "General",
+            "defaultValue": 200,
+            "defaultValueInternal": 200
+          },
+          {
+            "name": "InfoBarThickness",
+            "displayName": "InfoBarThickness",
+            "category": "Layout",
+            "defaultValue": 8,
+            "defaultValueInternal": 8
+          },
+          {
+            "name": "InfoBarDisplacement",
+            "displayName": "InfoBarDisplacement",
+            "category": "Layout",
+            "defaultValue": 100,
+            "defaultValueInternal": 100
+          },
+          {
+            "name": "InfoBarColor",
+            "displayName": "InfoBarColor",
+            "category": "Layout",
+            "defaultValue": {
+              "color": "black"
+            },
+            "defaultValueInternal": {
+              "color": "black"
+            }
+          },
+          {
+            "name": "Visible",
+            "displayName": "Visible",
+            "category": "Layout",
+            "defaultValue": true,
+            "defaultValueInternal": true
+          },
+          {
+            "name": "zIndex",
+            "displayName": "zIndex",
+            "category": "Layout",
+            "defaultValue": 1000,
+            "defaultValueInternal": 1000
+          },
+          {
+            "name": "InfoBarText",
+            "displayName": "InfoBarText",
+            "category": "Text",
+            "defaultValue": null,
+            "defaultValueInternal": null
+          },
+          {
+            "name": "TextPlacement",
+            "displayName": "TextPlacement",
+            "category": "Text",
+            "defaultValue": "Left",
+            "defaultValueInternal": "Left"
+          },
+          {
+            "name": "TextDisplacement",
+            "displayName": "TextDisplacement",
+            "category": "Text",
+            "defaultValue": 15,
+            "defaultValueInternal": 15
+          },
+          {
+            "name": "TextOptions",
+            "displayName": "TextOptions",
+            "category": "Text",
+            "defaultValue": {
+              "Color": {
+                "color": "black"
+              },
+              "FontStyle": "Normal",
+              "FontWeight": "Normal",
+              "FontFamily": "",
+              "HorizontalAlignment": "Left",
+              "VerticalAlignment": "Bottom",
+              "FontSize": 20.0
+            },
+            "defaultValueInternal": {
+              "Color": {
+                "color": "black"
+              },
+              "FontStyle": "Normal",
+              "FontWeight": "Normal",
+              "FontFamily": "",
+              "HorizontalAlignment": "Left",
+              "VerticalAlignment": "Bottom",
+              "FontSize": 20.0
+            }
+          },
+          {
+            "name": "Marker",
+            "displayName": "Marker",
+            "category": "Marker",
+            "defaultValue": [],
+            "defaultValueInternal": []
+          }
+        ],
+        "properties": {
+          "ProcessingUnitIndex": {
+            "$ref": "tchmi:general#/definitions/UINT"
+          },
+          "PartIndex": {
+            "$ref": "tchmi:general#/definitions/UINT"
+          },
+          "PartStartPosition": {
+            "$ref": "tchmi:general#/definitions/UINT"
+          },
+          "PartEndPosition": {
+            "$ref": "tchmi:general#/definitions/UINT"
+          },
+          "InfoBarThickness": {
+            "$ref": "tchmi:general#/definitions/UINT"
+          },
+          "InfoBarDisplacement": {
+            "$ref": "tchmi:general#/definitions/UINT"
+          },
+          "InfoBarColor": {
+            "$ref": "tchmi:framework#/definitions/SolidColor"
+          },
+          "Visible": {
+            "type": "boolean"
+          },
+          "zIndex": {
+            "type": "integer"
+          },
+          "InfoBarText": {
+            "type": "string"
+          },
+          "TextPlacement": {
+            "$ref": "tchmi:framework#/definitions/HorizontalAlignment"
+          },
+          "TextDisplacement": {
+            "type": "integer"
+          },
+          "TextOptions": {
+            "$ref": "tchmi:framework#/definitions/TextOptions"
+          },
+          "Marker": {
+            "$ref": "tchmi:framework#/definitions/XtsInfoBarMarkers"
+          }
+        }
+      }
+    },
+    "InfoBarOptions": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "object",
+      "title": "InfoBarOptions",
+      "propertiesMeta": [
+        {
+          "name": "DisplacementToFirst",
+          "displayName": "DisplacementToFirst",
+          "category": "Layout",
+          "defaultValue": 150,
+          "defaultValueInternal": 150
+        },
+        {
+          "name": "SpaceBetweenInfoBars",
+          "displayName": "SpaceBetweenInfoBars",
+          "category": "Layout",
+          "defaultValue": 25,
+          "defaultValueInternal": 25
+        }
+      ],
+      "properties": {
+        "DisplacementToFirst": {
+          "$ref": "tchmi:general#/definitions/UINT"
+        },
+        "SpaceBetweenInfoBars": {
+          "$ref": "tchmi:general#/definitions/UINT"
+        }
+      }
+    },
+    "XtsInfoBarMarkers": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "type": "array",
+      "title": "XtsInfoBarMarkers",
+      "items": {
+        "type": "object",
+        "title": "XtsInfoBarMarker",
+        "propertiesMeta": [
+          {
+            "name": "InfoBarPosition",
+            "displayName": "InfoBarPosition",
+            "category": "General",
+            "defaultValue": 100,
+            "defaultValueInternal": 100
+          },
+          {
+            "name": "MarkerType",
+            "displayName": "MarkerType",
+            "category": "Layout",
+            "defaultValue": "Diamond",
+            "defaultValueInternal": "Diamond"
+          },
+          {
+            "name": "MarkerThickness",
+            "displayName": "MarkerThickness",
+            "category": "Layout",
+            "defaultValue": 5,
+            "defaultValueInternal": 5
+          },
+          {
+            "name": "MarkerSize",
+            "displayName": "MarkerSize",
+            "category": "Layout",
+            "defaultValue": 25,
+            "defaultValueInternal": 25
+          },
+          {
+            "name": "MarkerColor",
+            "displayName": "MarkerColor",
+            "category": "Layout",
+            "defaultValue": {
+              "color": "black"
+            },
+            "defaultValueInternal": {
+              "color": "black"
+            }
+          },
+          {
+            "name": "zIndex",
+            "category": "Layout",
+            "displayName": "zIndex",
+            "defaultValue": 1001,
+            "defaultValueInternal": 1001
+          },
+          {
+            "name": "MarkerText",
+            "displayName": "MarkerText",
+            "category": "Text",
+            "defaultValue": null,
+            "defaultValueInternal": null
+          },
+          {
+            "name": "TextDisplacement",
+            "displayName": "TextDisplacement",
+            "category": "Text",
+            "defaultValue": 15,
+            "defaultValueInternal": 15
+          },
+          {
+            "name": "TextOptions",
+            "displayName": "TextOptions",
+            "category": "Text",
+            "defaultValue": {
+              "FontStyle": "Normal",
+              "FontWeight": "Normal",
+              "FontFamily": "",
+              "HorizontalAlignment": "Center",
+              "VerticalAlignment": "Bottom",
+              "FontSize": 20,
+              "Color": {
+                "color": "black"
+              }
+            },
+            "defaultValueInternal": {
+              "FontStyle": "Normal",
+              "FontWeight": "Normal",
+              "FontFamily": "",
+              "HorizontalAlignment": "Center",
+              "VerticalAlignment": "Bottom",
+              "FontSize": 20,
+              "Color": {
+                "color": "black"
+              }
+            }
+          }
+        ],
+        "properties": {
+          "InfoBarPosition": {
+            "$ref": "tchmi:general#/definitions/UINT"
+          },
+          "MarkerType": {
+            "$ref": "tchmi:framework#/definitions/MarkerType"
+          },
+          "MarkerThickness": {
+            "$ref": "tchmi:general#/definitions/UINT"
+          },
+          "MarkerSize": {
+            "$ref": "tchmi:general#/definitions/UINT"
+          },
+          "MarkerColor": {
+            "$ref": "tchmi:framework#/definitions/SolidColor"
+          },
+          "zIndex": {
+            "type": "integer"
+          },
+          "MarkerText": {
+            "type": "string"
+          },
+          "TextDisplacement": {
+            "type": "number"
+          },
+          "TextOptions": {
+            "$ref": "tchmi:framework#/definitions/TextOptions"
+          }
+        }
+      }
+    },
+    "MoverType": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "MoverType",
+      "type": "string",
+      "enum": [
+        "SystemView",
+        "Custom"
+      ]
+    },
+    "CustomMoverLayout": {
+      "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "CustomMoverLayout",
+      "type": "object",
+      "propertiesMeta": [
+        {
+          "name": "ImageSrcFrontSide",
+          "category": "FrontSide",
+          "displayName": "ImageSrcFrontSide",
+          "defaultValue": null,
+          "defaultValueInternal": null
+        },
+        {
+          "name": "ImageWidthFrontSide",
+          "category": "FrontSide",
+          "displayName": "ImageWidthFrontSide",
+          "defaultValue": 70,
+          "defaultValueInternal": 70
+        },
+        {
+          "name": "ImageHeightFrontSide",
+          "category": "FrontSide",
+          "displayName": "ImageHeightFrontSide",
+          "defaultValue": 126,
+          "defaultValueInternal": 126
+        },
+        {
+          "name": "XOffsetFrontSide",
+          "category": "FrontSide",
+          "displayName": "XOffsetFrontSide",
+          "defaultValue": 0,
+          "defaultValueInternal": 0
+        },
+        {
+          "name": "YOffsetFrontSide",
+          "category": "FrontSide",
+          "displayName": "YOffsetFrontSide",
+          "defaultValue": 0,
+          "defaultValueInternal": 0
+        },
+        {
+          "name": "ImageSrcBackSide",
+          "category": "BackSide",
+          "displayName": "ImageSrcBackSide",
+          "defaultValue": null,
+          "defaultValueInternal": null
+        },
+        {
+          "name": "ImageWidthBackSide",
+          "category": "BackSide",
+          "displayName": "ImageWidthBackSide",
+          "defaultValue": 70,
+          "defaultValueInternal": 70
+        },
+        {
+          "name": "ImageHeightBackSide",
+          "category": "BackSide",
+          "displayName": "ImageHeightBackSide",
+          "defaultValue": 80,
+          "defaultValueInternal": 80
+        },
+        {
+          "name": "XOffsetBackSide",
+          "category": "BackSide",
+          "displayName": "XOffsetBackSide",
+          "defaultValue": 0,
+          "defaultValueInternal": 0
+        },
+        {
+          "name": "YOffsetBackSide",
+          "category": "BackSide",
+          "displayName": "YOffsetBackSide",
+          "defaultValue": 0,
+          "defaultValueInternal": 0
+        }
+      ],
+      "properties": {
+        "ImageSrcFrontSide": {
+          "$ref": "tchmi:framework#/definitions/Path"
+        },
+        "ImageWidthFrontSide": {
+          "$ref": "tchmi:framework#/definitions/MeasurementValue"
+        },
+        "ImageHeightFrontSide": {
+          "$ref": "tchmi:framework#/definitions/MeasurementValue"
+        },
+        "XOffsetFrontSide": {
+          "$ref": "tchmi:framework#/definitions/MeasurementValue"
+        },
+        "YOffsetFrontSide": {
+          "$ref": "tchmi:framework#/definitions/MeasurementValue"
+        },
+        "ImageSrcBackSide": {
+          "$ref": "tchmi:framework#/definitions/Path"
+        },
+        "ImageWidthBackSide": {
+          "$ref": "tchmi:framework#/definitions/MeasurementValue"
+        },
+        "ImageHeightBackSide": {
+          "$ref": "tchmi:framework#/definitions/MeasurementValue"
+        },
+        "XOffsetBackSide": {
+          "$ref": "tchmi:framework#/definitions/MeasurementValue"
+        },
+        "YOffsetBackSide": {
+          "$ref": "tchmi:framework#/definitions/MeasurementValue"
+        }
+      }
+    },
+    "TcHmi.Controls.TcHmiExtendedControls.LabeledInput": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "LabeledInput",
+      "frameworkControlNamespace": "TcHmi.Controls.TcHmiExtendedControls"
+    },
+    "TcHmi.Controls.TcHmiExtendedControls.ExtendedControls.LabelPosition": {
+      "type": "string",
+      "enum": [
+        "Left",
+        "Right",
+        "Top",
+        "Bottom"
+      ]
+    },
+    "TcHmi.Controls.TcHmiExtendedControls.ExtendedControls.LabelToControlRatio": {
+      "type": "string",
+      "enum": [
+        "2:1",
+        "1:1",
+        "1:2",
+        "auto"
+      ]
+    },
+    "TcHmi.Controls.TcHmiExtendedControls.ExtendedControls.UnitPosition": {
+      "title": "Input Unit Position",
+      "type": "string",
+      "enum": [
+        "Left",
+        "Right"
+      ],
+      "default": "Right"
+    },
+    "TcHmi.Controls.TcHmiExtendedControls.LinearGauge": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "LinearGauge",
+      "frameworkControlNamespace": "TcHmi.Controls.TcHmiExtendedControls"
+    },
+    "TcHmi.Controls.TcHmiExtendedControls.LinearGauge.GaugeOrientation": {
+      "type": "string",
+      "enum": [
+        "Horizontal",
+        "Vertical"
+      ]
+    },
+    "TcHmi.Controls.TcHmiExtendedControls.RangeSlider": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "RangeSlider",
+      "frameworkControlNamespace": "TcHmi.Controls.TcHmiExtendedControls"
+    },
+    "TcHmi.Controls.TcHmiExtendedControls.RangeSlider.SliderOrientation": {
+      "type": "string",
+      "enum": [
+        "Horizontal",
+        "Vertical"
+      ]
+    },
+    "TcHmi.Controls.TcHmiExtendedControls.StatusIndicator": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "StatusIndicator",
+      "frameworkControlNamespace": "TcHmi.Controls.TcHmiExtendedControls"
+    },
+    "TcHmi.Controls.TcHmiExtendedControls.EnumRadioButton": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "EnumRadioButton",
+      "frameworkControlNamespace": "TcHmi.Controls.TcHmiExtendedControls"
+    },
+    "TcHmi.Controls.TcHmiExtendedControls.RadialGauge": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "RadialGauge",
+      "frameworkControlNamespace": "TcHmi.Controls.TcHmiExtendedControls"
+    },
+    "TcHmi.Controls.TcHmiExtendedControls.MultiselectCombobox": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "MultiselectCombobox",
+      "frameworkControlNamespace": "TcHmi.Controls.TcHmiExtendedControls"
+    },
+    "TcHmi.Controls.TcHmiExtendedControls.LabeledNumericInput": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "LabeledNumericInput",
+      "frameworkControlNamespace": "TcHmi.Controls.TcHmiExtendedControls"
+    },
+    "TcHmi.Controls.TcHmiExtendedControls.ConfirmationButton": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "ConfirmationButton",
+      "frameworkControlNamespace": "TcHmi.Controls.TcHmiExtendedControls"
+    },
+    "TcHmi.Controls.TcHmiExtendedControls.DataDisplayTile": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "DataDisplayTile",
+      "frameworkControlNamespace": "TcHmi.Controls.TcHmiExtendedControls"
+    },
+    "TcHmi.Controls.TcHmiExtendedControls.DetailedNumpad": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "DetailedNumpad",
+      "frameworkControlNamespace": "TcHmi.Controls.TcHmiExtendedControls"
+    },
+    "TcHmi.Controls.TcHmiExtendedControls.DetailedNumpad.ConfigData": {
+      "type": "object",
+      "propertiesMeta": [
+        {
+          "name": "min",
+          "displayName": "Min",
+          "category": "General",
+          "displayPriority": 10,
+          "description": "Minimum value allowed.",
+          "defaultValue": "0",
+          "defaultValueInternal": null
+        },
+        {
+          "name": "max",
+          "displayName": "Max",
+          "category": "General",
+          "displayPriority": 10,
+          "description": "Maximum value allowed.",
+          "defaultValue": "100",
+          "defaultValueInternal": null
+        },
+        {
+          "name": "label",
+          "displayName": "Label",
+          "category": "General",
+          "displayPriority": 10,
+          "description": "Label describing the input",
+          "defaultValue": "",
+          "defaultValueInternal": null
+        }
+      ],
+      "properties": {
+        "min": {
+          "type": "number"
+        },
+        "max": {
+          "type": "number"
+        },
+        "label": {
+          "type": "string"
+        }
+      }
+    },
     "TcHmi.Functions.BaseTemplate.MediaQueryList": {
       "id": "tchmi:framework#/definitions/TcHmi.Functions.BaseTemplate.MediaQueryList",
       "type": "array",

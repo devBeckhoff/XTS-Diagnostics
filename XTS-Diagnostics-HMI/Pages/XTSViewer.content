@@ -1,3 +1,129 @@
 <div id="XTSViewer" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%">
 
+<div id="XtsView_1" data-tchmi-type="TcHmi.XTS.Controls.XtsView" data-tchmi-displaydimensions="False" data-tchmi-displaystations="True" data-tchmi-invertdimensions="False" data-tchmi-layout="SystemView" data-tchmi-left="1" data-tchmi-left-unit="%" data-tchmi-lockpan="False" data-tchmi-lockzoom="False" data-tchmi-movertype="SystemView" data-tchmi-refreshrate="16" data-tchmi-selectionmode="Off" data-tchmi-showdriveerrors="True" data-tchmi-showdrivewarnings="True" data-tchmi-targetname="Local" data-tchmi-top="1" data-tchmi-top-unit="%" data-tchmi-viewrotation="0" data-tchmi-right="1" data-tchmi-bottom="1" data-tchmi-right-unit="%" data-tchmi-bottom-unit="%">
+<script data-tchmi-target-attribute="data-tchmi-toolarray" type="application/json">
+[]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-infoimages" type="application/json">
+[]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-parttransformation" type="application/json">
+[]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-transformation" type="application/json">
+[]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-custommoverlayout" type="application/json">
+{
+  "ImageSrcFrontSide": null,
+  "ImageWidthFrontSide": 70,
+  "ImageHeightFrontSide": 126,
+  "XOffsetFrontSide": 0,
+  "YOffsetFrontSide": 0,
+  "ImageSrcBackSide": "",
+  "ImageWidthBackSide": 70,
+  "ImageHeightBackSide": 80,
+  "XOffsetBackSide": 0,
+  "YOffsetBackSide": 0
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-moverselection" type="application/json">
+[]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-moduleselection" type="application/json">
+[]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-moduleselectioncolor" type="application/json">
+{
+  "color": "Transparent"
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-moverselectioncolor" type="application/json">
+{
+  "color": "Transparent"
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-stationoptions" type="application/json">
+{
+  "DisplacementToFirst": 150,
+  "SpaceBetweenStackedStations": 25,
+  "Thickness": 8,
+  "Text": "None",
+  "TextInfoBarPlacement": "Left",
+  "TextDisplacement": 10,
+  "zIndex": 1000,
+  "TextOptions": {
+    "FontStyle": "Normal",
+    "FontWeight": "Normal",
+    "FontFamily": "",
+    "HorizontalAlignment": "Left",
+    "VerticalAlignment": "Bottom",
+    "FontSize": 20
+  }
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-stationmarkeroptions" type="application/json">
+{
+  "MarkerType": "Diamond",
+  "Size": 20,
+  "Thickness": 8,
+  "Text": "None",
+  "TextDisplacement": 20,
+  "zIndex": 1100,
+  "TextOptions": {
+    "FontStyle": "Normal",
+    "FontWeight": "Normal",
+    "FontFamily": "",
+    "HorizontalAlignment": "Center",
+    "VerticalAlignment": "Bottom",
+    "FontSize": 20
+  }
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-dimensionoptions" type="application/json">
+{
+  "Displacement": 100,
+  "InfoBarThickness": 8,
+  "MarkerThickness": 5,
+  "MarkerSize": 25,
+  "MarkerType": "Tick",
+  "TextPattern": 2,
+  "TextDisplacement": 10,
+  "zIndex": 1200,
+  "InfoBarColor": {
+    "color": "black"
+  },
+  "MarkerColor": {
+    "color": "black"
+  },
+  "TextOptions": {
+    "FontStyle": "Normal",
+    "FontWeight": "Normal",
+    "FontFamily": "",
+    "HorizontalAlignment": "Center",
+    "VerticalAlignment": "Bottom",
+    "FontSize": 20,
+    "Color": {
+      "color": "black"
+    }
+  }
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-infobars" type="application/json">
+[]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-infobaroptions" type="application/json">
+{
+  "DisplacementToFirst": 150,
+  "SpaceBetweenInfoBars": 25
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
+</div>
 </div>

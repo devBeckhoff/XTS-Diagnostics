@@ -93,6 +93,16 @@
             "PROCESSID": -1,
             "REQUIRED": true,
             "STARTUPTYPE": 1
+        },
+        "TcXtsHmiServerExtension": {
+            "ENABLED": true,
+            "METADATA": {
+                "migrationVersion": "1.14"
+            },
+            "NAME": "TcXtsHmiServerExtension",
+            "PATH": "..\\..\\XTS-Diagnostics-HMI\\Packages\\Beckhoff.TwinCAT.HMI.XTS.4.4.2\\runtimes\\any\\native\\",
+            "REQUIRED": false,
+            "STARTUPTYPE": 1
         }
     },
     "FILES": {
@@ -4834,6 +4844,279 @@
             },
             "USEMAPPING": true
         },
+        "TcXtsHmiServerExtension.Config": {
+            "ACCESS": 0,
+            "DOMAIN": "TcXtsHmiServerExtension",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Config",
+            "OPTIONS": {},
+            "SCHEMA": {},
+            "USEMAPPING": true
+        },
+        "TcXtsHmiServerExtension.ModuleDriveStates": {
+            "ACCESS": 3,
+            "DOMAIN": "TcXtsHmiServerExtension",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ModuleDriveStates",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "items": {
+                    "items": {
+                        "type": "number"
+                    },
+                    "type": "array"
+                },
+                "type": "array",
+                "writeValue": {
+                    "properties": {
+                        "targetSystem": {
+                            "$ref": "tchmi:general#/definitions/String"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "USEMAPPING": true
+        },
+        "TcXtsHmiServerExtension.MoverPositions": {
+            "ACCESS": 3,
+            "DOMAIN": "TcXtsHmiServerExtension",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "MoverPositions",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "items": {
+                    "items": {
+                        "properties": {
+                            "PartOid": {
+                                "$ref": "tchmi:general#/definitions/UINT"
+                            },
+                            "PartPosition": {
+                                "$ref": "tchmi:general#/definitions/DOUBLE"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "type": "array",
+                "writeValue": {
+                    "properties": {
+                        "targetSystem": {
+                            "$ref": "tchmi:general#/definitions/String"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "USEMAPPING": true
+        },
+        "TcXtsHmiServerExtension.PartTransformations": {
+            "ACCESS": 3,
+            "DOMAIN": "TcXtsHmiServerExtension",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "PartTransformations",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "items": {
+                    "items": {
+                        "properties": {
+                            "OffsetX": {
+                                "$ref": "tchmi:general#/definitions/FLOAT"
+                            },
+                            "OffsetY": {
+                                "$ref": "tchmi:general#/definitions/FLOAT"
+                            },
+                            "Rotation": {
+                                "$ref": "tchmi:general#/definitions/FLOAT"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "type": "array",
+                "writeValue": {
+                    "properties": {
+                        "targetSystem": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "USEMAPPING": true
+        },
+        "TcXtsHmiServerExtension.XtsModel": {
+            "ACCESS": 3,
+            "DOMAIN": "TcXtsHmiServerExtension",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "XtsModel",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "properties": {
+                    "InfoServer": {
+                        "properties": {
+                            "Stations": {
+                                "items": {
+                                    "properties": {
+                                        "Description": {
+                                            "$ref": "tchmi:general#/definitions/String"
+                                        },
+                                        "EndPositionOnPart": {
+                                            "$ref": "tchmi:general#/definitions/DOUBLE"
+                                        },
+                                        "IsEnabled": {
+                                            "$ref": "tchmi:general#/definitions/BOOL"
+                                        },
+                                        "Parts": {
+                                            "items": {
+                                                "$ref": "tchmi:general#/definitions/UINT"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "StartPositionOnPart": {
+                                            "$ref": "tchmi:general#/definitions/DOUBLE"
+                                        },
+                                        "StationColor": {
+                                            "$ref": "tchmi:general#/definitions/UINT"
+                                        },
+                                        "StationId": {
+                                            "$ref": "tchmi:general#/definitions/UINT"
+                                        },
+                                        "StopPositions": {
+                                            "items": {
+                                                "$ref": "tchmi:general#/definitions/DOUBLE"
+                                            },
+                                            "type": "array"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "ProcessingUnits": {
+                        "items": {
+                            "properties": {
+                                "MoverType": {
+                                    "$ref": "tchmi:general#/definitions/DINT"
+                                },
+                                "Movers": {
+                                    "items": {
+                                        "properties": {
+                                            "Id": {
+                                                "$ref": "tchmi:general#/definitions/String"
+                                            },
+                                            "Name": {
+                                                "$ref": "tchmi:general#/definitions/String"
+                                            },
+                                            "ObjectId": {
+                                                "$ref": "tchmi:general#/definitions/UINT"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
+                                "Parts": {
+                                    "items": {
+                                        "properties": {
+                                            "ModuleSide": {
+                                                "$ref": "tchmi:general#/definitions/DINT"
+                                            },
+                                            "Modules": {
+                                                "items": {
+                                                    "properties": {
+                                                        "Gap": {
+                                                            "$ref": "tchmi:general#/definitions/DOUBLE"
+                                                        },
+                                                        "ModuleType": {
+                                                            "$ref": "tchmi:general#/definitions/UINT"
+                                                        },
+                                                        "Name": {
+                                                            "$ref": "tchmi:general#/definitions/String"
+                                                        },
+                                                        "ObjectId": {
+                                                            "$ref": "tchmi:general#/definitions/UINT"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "Name": {
+                                                "$ref": "tchmi:general#/definitions/String"
+                                            },
+                                            "ObjectId": {
+                                                "$ref": "tchmi:general#/definitions/UINT"
+                                            },
+                                            "OriginTransform": {
+                                                "properties": {
+                                                    "OffsetX": {
+                                                        "$ref": "tchmi:general#/definitions/FLOAT"
+                                                    },
+                                                    "OffsetY": {
+                                                        "$ref": "tchmi:general#/definitions/FLOAT"
+                                                    },
+                                                    "Rotation": {
+                                                        "$ref": "tchmi:general#/definitions/FLOAT"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
+                                "Tracks": {
+                                    "items": {
+                                        "properties": {
+                                            "ObjectId": {
+                                                "$ref": "tchmi:general#/definitions/UINT"
+                                            },
+                                            "PartConfigs": {
+                                                "items": {
+                                                    "properties": {
+                                                        "ObjectId": {
+                                                            "$ref": "tchmi:general#/definitions/UINT"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    }
+                },
+                "type": "object",
+                "writeValue": {
+                    "properties": {
+                        "targetSystem": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "USEMAPPING": true
+        },
         "Unsubscribe": {
             "ACCESS": 3,
             "DOMAIN": "TcHmiSrv",
@@ -5070,6 +5353,10 @@
                 "TcHmiUserManagement.Enable2FA": 3,
                 "TcHmiUserManagement.Get2FAStatus": 3,
                 "TcHmiUserManagement.GetComplexityRules": 3,
+                "TcXtsHmiServerExtension.ModuleDriveStates": 3,
+                "TcXtsHmiServerExtension.MoverPositions": 3,
+                "TcXtsHmiServerExtension.PartTransformations": 3,
+                "TcXtsHmiServerExtension.XtsModel": 3,
                 "Unsubscribe": 3,
                 "UnsubscribeEvents": 3,
                 "UpdateEventsSubscription": 3,
@@ -5123,6 +5410,8 @@
         "/Beckhoff.TwinCAT.HMI.EcDiagnosticsControl": "..\\..\\XTS-Diagnostics-HMI\\Packages\\Beckhoff.TwinCAT.HMI.EcDiagnosticsControl.14.3.342\\runtimes\\native1.12-tchmi",
         "/Beckhoff.TwinCAT.HMI.Framework": "..\\..\\XTS-Diagnostics-HMI\\Packages\\Beckhoff.TwinCAT.HMI.Framework.14.3.431\\runtimes\\native1.12-tchmi",
         "/Beckhoff.TwinCAT.HMI.Functions": "..\\..\\XTS-Diagnostics-HMI\\Packages\\Beckhoff.TwinCAT.HMI.Functions.14.3.344\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.XTS.Controls": "..\\..\\XTS-Diagnostics-HMI\\Packages\\Beckhoff.TwinCAT.HMI.XTS.Controls.4.4.4\\runtimes\\native1.12-tchmi",
+        "/TcHmiExtendedControls": "..\\..\\XTS-Diagnostics-HMI\\Packages\\TcHmiExtendedControls.1.1.6\\runtimes\\native1.12-tchmi",
         "/bin": "..\\..\\XTS-Diagnostics-HMI\\bin\\"
     }
 }

@@ -138,6 +138,7 @@
     <Folder Include="Server\TcHmiSqliteLogger\" />
     <Folder Include="Server\TcHmiSrv\" />
     <Folder Include="Server\TcHmiUserManagement\" />
+    <Folder Include="Server\TcXtsHmiServerExtension" />
     <Folder Include="Themes" />
     <Folder Include="Themes\Base-Dark\Images\" />
     <Folder Include="Themes\Base-Dark\Images\Events\" />
@@ -227,6 +228,15 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\TcHmiUserManagement\TcHmiUserManagement.Storage.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcXtsHmiServerExtension\TcXtsHmiServerExtension.Config.default.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcXtsHmiServerExtension\TcXtsHmiServerExtension.Config.remote.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcXtsHmiServerExtension\TcXtsHmiServerExtension.Storage.json">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Themes\Base-Dark\Base-Dark.theme">

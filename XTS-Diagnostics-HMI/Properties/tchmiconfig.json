@@ -518,6 +518,20 @@
       "symbols": {
         "package": {}
       }
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.XTS.Controls",
+      "basePath": "/Beckhoff.TwinCAT.HMI.XTS.Controls",
+      "symbols": {
+        "package": {}
+      }
+    },
+    {
+      "name": "TcHmiExtendedControls",
+      "basePath": "/TcHmiExtendedControls",
+      "symbols": {
+        "package": {}
+      }
     }
   ],
   "keyboardLayouts": [
