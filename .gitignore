@@ -79,7 +79,6 @@ VisualStudio.gitignore
 *.userosscache
 *.sln.docstates
 *.bak
-*.sln
 *.~u
 .vs
 UpgradeLog.htm

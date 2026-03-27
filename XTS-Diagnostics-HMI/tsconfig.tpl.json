@@ -7,8 +7,8 @@
     "skipLibCheck": true,
     "lib": [ "DOM", "DOM.Iterable", "ES2023" ],
     "paths": {
-      "Beckhoff.TwinCAT.HMI.Framework/*": [ "$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/*" ],
-      "Beckhoff.TwinCAT.HMI.Framework": [ "$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/index.esm.d.ts" ]
+      "Beckhoff.TwinCAT.HMI.Framework/*": [ "./$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/*" ],
+      "Beckhoff.TwinCAT.HMI.Framework": [ "./$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/index.esm.d.ts" ]
     },
     "types": [],
     "declaration": true,
