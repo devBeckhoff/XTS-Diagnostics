@@ -135,6 +135,7 @@
     <Folder Include="Server\ADS\" />
     <Folder Include="Server\TcHmiEcDiagnostics" />
     <Folder Include="Server\TcHmiLua\" />
+    <Folder Include="Server\TcHmiMdp" />
     <Folder Include="Server\TcHmiSqliteLogger\" />
     <Folder Include="Server\TcHmiSrv\" />
     <Folder Include="Server\TcHmiUserManagement\" />
@@ -179,6 +180,7 @@
     <Content Include="Server\ADS\ADS.Config.default.json">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Server\ADS\ADS.Config.default.json" />
     <Content Include="Server\ADS\ADS.Config.remote.json">
       <SubType>Content</SubType>
     </Content>
@@ -201,6 +203,15 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\TcHmiLua\TcHmiLua.Storage.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiMdp\TcHmiMdp.Config.default.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiMdp\TcHmiMdp.Config.remote.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiMdp\TcHmiMdp.Storage.json">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\TcHmiSqliteLogger\TcHmiSqliteLogger.Config.default.json">

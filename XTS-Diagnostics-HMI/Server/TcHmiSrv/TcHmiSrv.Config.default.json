@@ -72,6 +72,16 @@
             "REQUIRED": true,
             "STARTUPTYPE": 0
         },
+        "TcHmiMdp": {
+            "ENABLED": true,
+            "METADATA": {
+                "migrationVersion": "1.14"
+            },
+            "NAME": "TcHmiMdp",
+            "PATH": "..\\..\\XTS-Diagnostics-HMI\\Packages\\Beckhoff.TwinCAT.HMI.Mdp.22.0.7447\\runtimes\\win-x64\\native\\",
+            "REQUIRED": false,
+            "STARTUPTYPE": 1
+        },
         "TcHmiSqliteLogger": {
             "ENABLED": true,
             "METADATA": {
@@ -4289,6 +4299,148 @@
             "SCHEMA": {},
             "USEMAPPING": true
         },
+        "TcHmiMdp.Config": {
+            "ACCESS": 0,
+            "DOMAIN": "TcHmiMdp",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Config",
+            "OPTIONS": {},
+            "SCHEMA": {},
+            "USEMAPPING": true
+        },
+        "TcHmiMdp.Diagnostics": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiMdp",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Diagnostics",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "function": true
+                    },
+                    {
+                        "oneOf": [
+                            {
+                                "properties": {
+                                    "targetSystems": {
+                                        "additionalProperties": {
+                                            "properties": {
+                                                "availableModulesCount": {
+                                                    "propertyOrder": 4,
+                                                    "type": "integer"
+                                                },
+                                                "connectError": {
+                                                    "propertyOrder": 2,
+                                                    "type": "integer"
+                                                },
+                                                "connectErrorMessage": {
+                                                    "propertyOrder": 3,
+                                                    "type": "string"
+                                                },
+                                                "connectionState": {
+                                                    "propertyOrder": 1,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "connectionState"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "configDescription": "descTargetSystems",
+                                        "type": "object"
+                                    }
+                                },
+                                "type": "object",
+                                "versions": [
+                                    1.0
+                                ]
+                            },
+                            {
+                                "properties": {
+                                    "domainError": {
+                                        "format": "multiline",
+                                        "propertyOrder": 3,
+                                        "type": "string"
+                                    },
+                                    "domainState": {
+                                        "enum": [
+                                            "Good",
+                                            "Bad"
+                                        ],
+                                        "propertyOrder": 2,
+                                        "type": "string"
+                                    },
+                                    "targetSystems": {
+                                        "additionalProperties": {
+                                            "properties": {
+                                                "availableModulesCount": {
+                                                    "propertyOrder": 4,
+                                                    "type": "integer"
+                                                },
+                                                "connectError": {
+                                                    "propertyOrder": 2,
+                                                    "type": "integer"
+                                                },
+                                                "connectErrorMessage": {
+                                                    "propertyOrder": 3,
+                                                    "type": "string"
+                                                },
+                                                "connectionState": {
+                                                    "propertyOrder": 1,
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "connectionState"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "configDescription": "descTargetSystems",
+                                        "type": "object"
+                                    }
+                                },
+                                "type": "object",
+                                "versions": [
+                                    2.0
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiMdp.GetSchema": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiMdp",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "GetSchema",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "writeValue": {
+                    "type": "string"
+                }
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiMdp.ListSymbols": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiMdp",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ListSymbols",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true
+            },
+            "USEMAPPING": true
+        },
         "TcHmiSqliteLogger.Clear": {
             "ACCESS": 3,
             "DOMAIN": "TcHmiSqliteLogger",
@@ -5347,6 +5499,7 @@
                 "TcHmiEcDiagnostics.ListConfiguredDevices": 3,
                 "TcHmiEcDiagnostics.ListMastersOfRoute": 3,
                 "TcHmiEcDiagnostics.ListSlavesWithForcedProcessData": 3,
+                "TcHmiMdp.Diagnostics": 3,
                 "TcHmiSqliteLogger.Diagnostics": 3,
                 "TcHmiUserManagement.ChangePassword": 3,
                 "TcHmiUserManagement.Disable2FA": 3,
