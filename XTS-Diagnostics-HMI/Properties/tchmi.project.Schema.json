@@ -1,33 +1,4 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "definitions": {
-    "MoverDataType": {
-      "properties": {
-        "ActiveMoverCount": {
-          "$ref": "tchmi:general#/definitions/INT"
-        },
-        "DetectedMoverCount": {
-          "$ref": "tchmi:general#/definitions/INT"
-        },
-        "NcModuloPos": {
-          "$ref": "tchmi:general#/definitions/Number"
-        },
-        "ActPos": {
-          "$ref": "tchmi:general#/definitions/Number"
-        },
-        "ActVelo": {
-          "$ref": "tchmi:general#/definitions/Number"
-        }
-      },
-      "type": "object",
-      "description": "Data type to link to mover user control"
-    },
-    "ArrayOfMoverDataType": {
-      "items": {
-        "$ref": "tchmi:project#/definitions/MoverDataType"
-      },
-      "type": "array",
-      "description": "Array of Mover Data Type to write all mover values on init global"
-    }
-  }
+  "definitions": {}
 }
