@@ -29,7 +29,1095 @@
     "DEFAULTLOCALE": "client",
     "DEFAULTTIMEFORMATLOCALE": "client",
     "DEFAULTTIMEZONE": "client",
-    "DEFINITIONS": {},
+    "DEFINITIONS": {
+        "TcHmiMdp": {
+            "TcHmiMdp-Local.CPU": {
+                "properties": {
+                    "CpuFrequency": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "CurrentCpuTemperature": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/INT16"
+                            },
+                            {
+                                "comment": "requires BIOS API",
+                                "readOnly": true,
+                                "unit": "°C"
+                            }
+                        ]
+                    },
+                    "CurrentCpuUsage": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT16"
+                            },
+                            {
+                                "readOnly": true,
+                                "unit": "%"
+                            }
+                        ]
+                    },
+                    "ModuleHeader": {
+                        "$ref": "tchmi:server#/definitions/TcHmiMdp-Local.ModuleHeader"
+                    }
+                }
+            },
+            "TcHmiMdp-Local.DiskManagement": {
+                "properties": {
+                    "DriveLetter": {
+                        "items": {
+                            "readOnly": true,
+                            "type": "string"
+                        },
+                        "maxItems": 254,
+                        "readOnly": true,
+                        "type": "array"
+                    },
+                    "DriveType": {
+                        "items": {
+                            "enum": [
+                                0,
+                                1,
+                                2,
+                                4
+                            ],
+                            "options": [
+                                {
+                                    "label": "DRV_UNKNOWN",
+                                    "value": 0
+                                },
+                                {
+                                    "label": "DRV_FIXED",
+                                    "value": 1
+                                },
+                                {
+                                    "label": "DRV_REMOVABLE",
+                                    "value": 2
+                                },
+                                {
+                                    "label": "DRV_CDROM",
+                                    "value": 4
+                                }
+                            ],
+                            "readOnly": true,
+                            "type": "integer"
+                        },
+                        "maxItems": 254,
+                        "readOnly": true,
+                        "type": "array"
+                    },
+                    "FileSystem": {
+                        "items": {
+                            "readOnly": true,
+                            "type": "string"
+                        },
+                        "maxItems": 254,
+                        "readOnly": true,
+                        "type": "array"
+                    },
+                    "FreeSpace": {
+                        "items": {
+                            "allOf": [
+                                {
+                                    "$ref": "tchmi:general#/definitions/UINT64"
+                                },
+                                {
+                                    "readOnly": true,
+                                    "unit": "byte"
+                                }
+                            ]
+                        },
+                        "maxItems": 254,
+                        "readOnly": true,
+                        "type": "array"
+                    },
+                    "ModuleHeader": {
+                        "$ref": "tchmi:server#/definitions/TcHmiMdp-Local.ModuleHeader"
+                    },
+                    "TotalSize": {
+                        "items": {
+                            "allOf": [
+                                {
+                                    "$ref": "tchmi:general#/definitions/UINT64"
+                                },
+                                {
+                                    "readOnly": true,
+                                    "unit": "byte"
+                                }
+                            ]
+                        },
+                        "maxItems": 254,
+                        "readOnly": true,
+                        "type": "array"
+                    },
+                    "VolumeLabel": {
+                        "comment": "write is not supported under WinCE",
+                        "items": {
+                            "allOf": [
+                                {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "$ref": "tchmi:general#/definitions/VOID"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "readOnly": true
+                                }
+                            ]
+                        },
+                        "maxItems": 254,
+                        "readOnly": true,
+                        "type": "array"
+                    }
+                }
+            },
+            "TcHmiMdp-Local.GeneralArea": {
+                "properties": {
+                    "DeviceName": {
+                        "type": "string"
+                    },
+                    "DeviceType": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "HardwareVersion": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "OperatingSystemAndImageVersion": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "ProductCode": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "RevisionNumber": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "SerialNumber": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            },
+                            {
+                                "comment": "obsolete",
+                                "readOnly": true,
+                                "visibility": "HideInEngineering"
+                            }
+                        ]
+                    },
+                    "Vendor": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                }
+            },
+            "TcHmiMdp-Local.Mainboard": {
+                "properties": {
+                    "BiosMajorVersion": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT8"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "BiosMinorVersion": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT8"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "BiosVersion": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "BootCount": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "MainboardRevision": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT8"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "MainboardTemperature": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/INT16"
+                            },
+                            {
+                                "readOnly": true,
+                                "unit": "°C"
+                            }
+                        ]
+                    },
+                    "MainboardType": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "MaxBoardTemperature": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/INT32"
+                            },
+                            {
+                                "readOnly": true,
+                                "unit": "°C"
+                            }
+                        ]
+                    },
+                    "MaxInputVoltage": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/INT32"
+                            },
+                            {
+                                "readOnly": true,
+                                "unit": "mV"
+                            }
+                        ]
+                    },
+                    "MinBoardTemperature": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/INT32"
+                            },
+                            {
+                                "readOnly": true,
+                                "unit": "°C"
+                            }
+                        ]
+                    },
+                    "MinInputVoltage": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/INT32"
+                            },
+                            {
+                                "readOnly": true,
+                                "unit": "mV"
+                            }
+                        ]
+                    },
+                    "ModuleHeader": {
+                        "$ref": "tchmi:server#/definitions/TcHmiMdp-Local.ModuleHeader"
+                    },
+                    "OperatingTime": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            },
+                            {
+                                "comment": "minutes",
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "ProductionDate": {
+                        "comment": "YYYY-MM-DD-ww (Year-Month-Day-CalendarWeek) Each value can be 0 if it is not used.",
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "SerialNumber": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "VoltageInformation": {
+                        "properties": {
+                            "Location": {
+                                "items": {
+                                    "enum": [
+                                        0,
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        5,
+                                        6,
+                                        7,
+                                        8,
+                                        9,
+                                        10,
+                                        11,
+                                        12,
+                                        13,
+                                        14,
+                                        15,
+                                        16,
+                                        17,
+                                        18
+                                    ],
+                                    "options": [
+                                        {
+                                            "label": "LOCATION_UNKNOWN",
+                                            "value": 0
+                                        },
+                                        {
+                                            "label": "LOCATION_OTHER",
+                                            "value": 1
+                                        },
+                                        {
+                                            "label": "LOCATION_PROCESSOR",
+                                            "value": 2
+                                        },
+                                        {
+                                            "label": "LOCATION_DISK",
+                                            "value": 3
+                                        },
+                                        {
+                                            "label": "LOCATION_SYSTEM_MANAGEMENT_MODULE",
+                                            "value": 4
+                                        },
+                                        {
+                                            "label": "LOCATION_MOTHERBOARD",
+                                            "value": 5
+                                        },
+                                        {
+                                            "label": "LOCATION_MEMORY_MODULE",
+                                            "value": 6
+                                        },
+                                        {
+                                            "label": "LOCATION_POWER_SUPPLY",
+                                            "value": 7
+                                        },
+                                        {
+                                            "label": "LOCATION_ADDIN_CARD",
+                                            "value": 8
+                                        },
+                                        {
+                                            "label": "LOCATION_FRONT_PANEL_BOARD",
+                                            "value": 9
+                                        },
+                                        {
+                                            "label": "LOCATION_BACK_PANEL_BOARD",
+                                            "value": 10
+                                        },
+                                        {
+                                            "label": "LOCATION_PERIPHERIE",
+                                            "value": 11
+                                        },
+                                        {
+                                            "label": "LOCATION_CHASSIS",
+                                            "value": 12
+                                        },
+                                        {
+                                            "label": "LOCATION_BATTERY",
+                                            "value": 13
+                                        },
+                                        {
+                                            "label": "LOCATION_UPS",
+                                            "value": 14
+                                        },
+                                        {
+                                            "label": "LOCATION_GRAFFIC_BOARD",
+                                            "value": 15
+                                        },
+                                        {
+                                            "label": "LOCATION_SUPERIO",
+                                            "value": 16
+                                        },
+                                        {
+                                            "label": "LOCATION_CHIPSET",
+                                            "value": 17
+                                        },
+                                        {
+                                            "label": "LOCATION_PWRCTRL",
+                                            "value": 18
+                                        }
+                                    ],
+                                    "readOnly": true,
+                                    "type": "integer"
+                                },
+                                "maxItems": 254,
+                                "readOnly": true,
+                                "type": "array"
+                            },
+                            "Name": {
+                                "items": {
+                                    "readOnly": true,
+                                    "type": "string"
+                                },
+                                "maxItems": 254,
+                                "readOnly": true,
+                                "type": "array"
+                            },
+                            "NominalVoltage": {
+                                "items": {
+                                    "allOf": [
+                                        {
+                                            "$ref": "tchmi:general#/definitions/INT16"
+                                        },
+                                        {
+                                            "readOnly": true
+                                        }
+                                    ]
+                                },
+                                "maxItems": 254,
+                                "readOnly": true,
+                                "type": "array"
+                            },
+                            "Voltage": {
+                                "items": {
+                                    "allOf": [
+                                        {
+                                            "$ref": "tchmi:general#/definitions/INT16"
+                                        },
+                                        {
+                                            "readOnly": true
+                                        }
+                                    ]
+                                },
+                                "maxItems": 254,
+                                "readOnly": true,
+                                "type": "array"
+                            }
+                        },
+                        "type": "object"
+                    }
+                }
+            },
+            "TcHmiMdp-Local.Memory": {
+                "properties": {
+                    "MemoryDivision": {
+                        "$ref": "tchmi:general#/definitions/UINT32"
+                    },
+                    "ModuleHeader": {
+                        "$ref": "tchmi:server#/definitions/TcHmiMdp-Local.ModuleHeader"
+                    },
+                    "ProgramMemoryAllocated": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            },
+                            {
+                                "comment": "only supported on computers with up to 4GB of RAM",
+                                "readOnly": true,
+                                "unit": "byte"
+                            }
+                        ]
+                    },
+                    "ProgramMemoryAllocated_MoreThan4GbRam": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT64"
+                            },
+                            {
+                                "readOnly": true,
+                                "unit": "byte"
+                            }
+                        ]
+                    },
+                    "ProgramMemoryAvailable": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            },
+                            {
+                                "comment": "only supported on computers with up to 4GB of RAM",
+                                "readOnly": true,
+                                "unit": "byte"
+                            }
+                        ]
+                    },
+                    "ProgramMemoryAvailable_MoreThan4GbRam": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT64"
+                            },
+                            {
+                                "readOnly": true,
+                                "unit": "byte"
+                            }
+                        ]
+                    },
+                    "StorageMemoryAllocated": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            },
+                            {
+                                "readOnly": true,
+                                "unit": "byte"
+                            }
+                        ]
+                    },
+                    "StorageMemoryAvailable": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            },
+                            {
+                                "readOnly": true,
+                                "unit": "byte"
+                            }
+                        ]
+                    }
+                }
+            },
+            "TcHmiMdp-Local.ModuleHeader": {
+                "properties": {
+                    "Address": {
+                        "allOf": [
+                            {
+                                "readOnly": true
+                            },
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            }
+                        ]
+                    },
+                    "DevType": {
+                        "allOf": [
+                            {
+                                "readOnly": true
+                            },
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            }
+                        ]
+                    },
+                    "Name": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "Type": {
+                        "readOnly": true,
+                        "type": "string"
+                    }
+                },
+                "readOnly": true,
+                "type": "object"
+            },
+            "TcHmiMdp-Local.NetworkInterfaceController": {
+                "properties": {
+                    "DHCP": {
+                        "type": "boolean"
+                    },
+                    "IPv4Address": {
+                        "type": "string"
+                    },
+                    "IPv4DefaultGateway": {
+                        "type": "string"
+                    },
+                    "IPv4DnsServers": {
+                        "type": "string"
+                    },
+                    "IPv4DnsServersActive": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "IPv4SubnetMask": {
+                        "type": "string"
+                    },
+                    "MacAddress": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "ModuleHeader": {
+                        "$ref": "tchmi:server#/definitions/TcHmiMdp-Local.ModuleHeader"
+                    },
+                    "RenewAddress": {
+                        "function": true,
+                        "writeValue": {
+                            "anyOf": [
+                                {
+                                    "required": [],
+                                    "type": "object"
+                                },
+                                {
+                                    "$ref": "tchmi:general#/definitions/VOID"
+                                }
+                            ]
+                        }
+                    },
+                    "SetIpSubnetAndDefaultGateway": {
+                        "function": true,
+                        "writeValue": {
+                            "properties": {
+                                "Gateway": {
+                                    "type": "string"
+                                },
+                                "IP": {
+                                    "type": "string"
+                                },
+                                "Subnet": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "IP",
+                                "Subnet",
+                                "Gateway"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "VirtualDeviceName": {
+                        "type": "string"
+                    }
+                }
+            },
+            "TcHmiMdp-Local.TwinCAT": {
+                "properties": {
+                    "AddRoute": {
+                        "function": true,
+                        "writeValue": {
+                            "properties": {
+                                "Address": {
+                                    "type": "string"
+                                },
+                                "Flags": {
+                                    "$ref": "tchmi:general#/definitions/UINT32"
+                                },
+                                "Name": {
+                                    "type": "string"
+                                },
+                                "NetId": {
+                                    "format": "amsnetid",
+                                    "type": "string"
+                                },
+                                "Timeout": {
+                                    "$ref": "tchmi:general#/definitions/UINT32"
+                                },
+                                "Transport": {
+                                    "$ref": "tchmi:general#/definitions/UINT16"
+                                }
+                            },
+                            "required": [
+                                "Flags",
+                                "Timeout",
+                                "Transport",
+                                "NetId",
+                                "Name",
+                                "Address"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "AmsNetID": {
+                        "type": "string"
+                    },
+                    "Build": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT16"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "DebugWindow": {
+                        "comment": "True if ADS logger is active",
+                        "readOnly": true,
+                        "type": "boolean"
+                    },
+                    "DeleteRoute": {
+                        "function": true,
+                        "writeValue": {
+                            "properties": {
+                                "Name": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "Name"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "LogFilePath": {
+                        "type": "string"
+                    },
+                    "LogFileSize": {
+                        "$ref": "tchmi:general#/definitions/UINT32"
+                    },
+                    "MailboxSize": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "MailboxUsedEntries": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "MajorVersion": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT16"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "MinorVersion": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT16"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "ModuleHeader": {
+                        "$ref": "tchmi:server#/definitions/TcHmiMdp-Local.ModuleHeader"
+                    },
+                    "RegLevel": {
+                        "comment": "only for TwinCAT 2",
+                        "enum": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "options": [
+                            {
+                                "label": "CP",
+                                "value": 0
+                            },
+                            {
+                                "label": "I/O",
+                                "value": 1
+                            },
+                            {
+                                "label": "PLC",
+                                "value": 2
+                            },
+                            {
+                                "label": "NC-PTP",
+                                "value": 3
+                            },
+                            {
+                                "label": "NCI",
+                                "value": 4
+                            }
+                        ],
+                        "readOnly": true,
+                        "type": "integer"
+                    },
+                    "RegisteredDrivers": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "RegisteredPorts": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT64"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "RegisteredTransports": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT32"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "RouterMemoryAvailable": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT64"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "RouterMemoryMaximum": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT64"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "RunAsDevice": {
+                        "$ref": "tchmi:general#/definitions/UINT16"
+                    },
+                    "ShowTargetVisu": {
+                        "$ref": "tchmi:general#/definitions/UINT16"
+                    },
+                    "TwinCatHeapMemoryAvailable": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT64"
+                            },
+                            {
+                                "comment": "free memory in TcOS instance",
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "TwinCatHeapMemoryMaximum": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT64"
+                            },
+                            {
+                                "comment": "maximum available memory for TcOS instance",
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "TwinCatLogFile": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "TwinCatRevision": {
+                        "allOf": [
+                            {
+                                "anyOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/UINT16"
+                                    },
+                                    {
+                                        "$ref": "tchmi:general#/definitions/VOID"
+                                    }
+                                ]
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "TwinCatRouteAddress": {
+                        "items": {
+                            "readOnly": true,
+                            "type": "string"
+                        },
+                        "maxItems": 254,
+                        "readOnly": true,
+                        "type": "array"
+                    },
+                    "TwinCatRouteAmsAddress": {
+                        "items": {
+                            "readOnly": true,
+                            "type": "string"
+                        },
+                        "maxItems": 254,
+                        "readOnly": true,
+                        "type": "array"
+                    },
+                    "TwinCatRouteFlags": {
+                        "items": {
+                            "allOf": [
+                                {
+                                    "$ref": "tchmi:general#/definitions/UINT32"
+                                },
+                                {
+                                    "readOnly": true
+                                }
+                            ]
+                        },
+                        "maxItems": 254,
+                        "readOnly": true,
+                        "type": "array"
+                    },
+                    "TwinCatRouteName": {
+                        "items": {
+                            "readOnly": true,
+                            "type": "string"
+                        },
+                        "maxItems": 254,
+                        "readOnly": true,
+                        "type": "array"
+                    },
+                    "TwinCatRouteTimeout": {
+                        "items": {
+                            "allOf": [
+                                {
+                                    "$ref": "tchmi:general#/definitions/UINT32"
+                                },
+                                {
+                                    "readOnly": true
+                                }
+                            ]
+                        },
+                        "maxItems": 254,
+                        "readOnly": true,
+                        "type": "array"
+                    },
+                    "TwinCatRouteTransport": {
+                        "items": {
+                            "enum": [
+                                0,
+                                1,
+                                2,
+                                3,
+                                4,
+                                5,
+                                6,
+                                7,
+                                8,
+                                9,
+                                10,
+                                11,
+                                12
+                            ],
+                            "options": [
+                                {
+                                    "label": "None",
+                                    "value": 0
+                                },
+                                {
+                                    "label": "TCP_IP",
+                                    "value": 1
+                                },
+                                {
+                                    "label": "IIO_LIGHTBUS",
+                                    "value": 2
+                                },
+                                {
+                                    "label": "PROFIBUS_DP",
+                                    "value": 3
+                                },
+                                {
+                                    "label": "PCI_ISA_BUS",
+                                    "value": 4
+                                },
+                                {
+                                    "label": "ADS_UDP",
+                                    "value": 5
+                                },
+                                {
+                                    "label": "FATP_UDP",
+                                    "value": 6
+                                },
+                                {
+                                    "label": "COM_PORT",
+                                    "value": 7
+                                },
+                                {
+                                    "label": "USB",
+                                    "value": 8
+                                },
+                                {
+                                    "label": "CAN_OPEN",
+                                    "value": 9
+                                },
+                                {
+                                    "label": "DEVICE_NET",
+                                    "value": 10
+                                },
+                                {
+                                    "label": "SSB",
+                                    "value": 11
+                                },
+                                {
+                                    "label": "SOAP",
+                                    "value": 12
+                                }
+                            ],
+                            "readOnly": true,
+                            "type": "integer"
+                        },
+                        "maxItems": 254,
+                        "readOnly": true,
+                        "type": "array"
+                    },
+                    "TwinCatStatus": {
+                        "allOf": [
+                            {
+                                "$ref": "tchmi:general#/definitions/UINT16"
+                            },
+                            {
+                                "readOnly": true
+                            }
+                        ]
+                    },
+                    "TwinCatSystemID": {
+                        "readOnly": true,
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    },
     "DEFLATECOMPRESSIONLEVEL": 5,
     "DIAGNOSTICS_DOMAINS": [],
     "DISABLED_CONFIGURATION_HINTS": [],
@@ -4441,6 +5529,76 @@
             },
             "USEMAPPING": true
         },
+        "TcHmiMdp.Local.CPU.0": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiMdp",
+            "DYNAMIC": true,
+            "MAPPING": "Local::CPU[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/TcHmiMdp-Local.CPU"
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiMdp.Local.DiskManagement.0": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiMdp",
+            "DYNAMIC": true,
+            "MAPPING": "Local::DiskManagement[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/TcHmiMdp-Local.DiskManagement"
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiMdp.Local.GeneralArea": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiMdp",
+            "DYNAMIC": true,
+            "MAPPING": "Local::GeneralArea",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/TcHmiMdp-Local.GeneralArea"
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiMdp.Local.Mainboard.0": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiMdp",
+            "DYNAMIC": true,
+            "MAPPING": "Local::Mainboard[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/TcHmiMdp-Local.Mainboard"
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiMdp.Local.Memory.0": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiMdp",
+            "DYNAMIC": true,
+            "MAPPING": "Local::Memory[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/TcHmiMdp-Local.Memory"
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiMdp.Local.NetworkInterfaceController.0": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiMdp",
+            "DYNAMIC": true,
+            "MAPPING": "Local::NetworkInterfaceController[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/TcHmiMdp-Local.NetworkInterfaceController"
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiMdp.Local.TwinCAT.0": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiMdp",
+            "DYNAMIC": true,
+            "MAPPING": "Local::TwinCAT[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/TcHmiMdp-Local.TwinCAT"
+            },
+            "USEMAPPING": true
+        },
         "TcHmiSqliteLogger.Clear": {
             "ACCESS": 3,
             "DOMAIN": "TcHmiSqliteLogger",
@@ -5006,6 +6164,380 @@
             "SCHEMA": {},
             "USEMAPPING": true
         },
+        "TcXtsHmiServerExtension.DiagnosticData": {
+            "ACCESS": 1,
+            "DOMAIN": "TcXtsHmiServerExtension",
+            "DYNAMIC": true,
+            "MAPPING": "DiagnosticData",
+            "SCHEMA": {
+                "function": true,
+                "properties": {
+                    "Targets": {
+                        "items": {
+                            "properties": {
+                                "AmsNetId": {
+                                    "type": "string"
+                                },
+                                "Name": {
+                                    "type": "string"
+                                },
+                                "System": {
+                                    "properties": {
+                                        "InfoServer": {
+                                            "properties": {
+                                                "Stations": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "Description": {
+                                                                "$ref": "tchmi:general#/definitions/String"
+                                                            },
+                                                            "EndPositionOnPart": {
+                                                                "$ref": "tchmi:general#/definitions/DOUBLE"
+                                                            },
+                                                            "IsEnabled": {
+                                                                "$ref": "tchmi:general#/definitions/BOOL"
+                                                            },
+                                                            "Parts": {
+                                                                "items": {
+                                                                    "$ref": "tchmi:general#/definitions/UINT"
+                                                                },
+                                                                "type": "array"
+                                                            },
+                                                            "StartPositionOnPart": {
+                                                                "$ref": "tchmi:general#/definitions/DOUBLE"
+                                                            },
+                                                            "StationColor": {
+                                                                "$ref": "tchmi:general#/definitions/UINT"
+                                                            },
+                                                            "StationId": {
+                                                                "$ref": "tchmi:general#/definitions/UINT"
+                                                            },
+                                                            "StopPositions": {
+                                                                "items": {
+                                                                    "$ref": "tchmi:general#/definitions/DOUBLE"
+                                                                },
+                                                                "type": "array"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "ProcessingUnits": {
+                                            "items": {
+                                                "properties": {
+                                                    "ActiveMoverCount": {
+                                                        "type": "integer"
+                                                    },
+                                                    "AreAllPositionsValid": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "DetectedMoverCount": {
+                                                        "type": "integer"
+                                                    },
+                                                    "DetectionState": {
+                                                        "type": "string"
+                                                    },
+                                                    "DriveState": {
+                                                        "type": "string"
+                                                    },
+                                                    "ExpectedMoverCount": {
+                                                        "type": "integer"
+                                                    },
+                                                    "HasIdDetectionError": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "HasInputCheckError": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "IdDetectionMode": {
+                                                        "type": "string"
+                                                    },
+                                                    "IsDefaultTeachingAvailable": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "IsIdDetectionActive": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "IsIdDetectionValid": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "IsTeachingEnabled": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "IsTeachingValid": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "MagnetPlateType": {
+                                                        "type": "string"
+                                                    },
+                                                    "MinMechanicalMoverDistance": {
+                                                        "type": "number"
+                                                    },
+                                                    "MoverSortOrder": {
+                                                        "type": "string"
+                                                    },
+                                                    "MoverType": {
+                                                        "type": "string"
+                                                    },
+                                                    "Movers": {
+                                                        "items": {
+                                                            "properties": {
+                                                                "Id": {
+                                                                    "type": "string"
+                                                                },
+                                                                "Name": {
+                                                                    "type": "string"
+                                                                },
+                                                                "NcModuloPos": {
+                                                                    "type": "number"
+                                                                },
+                                                                "NcPos": {
+                                                                    "type": "number"
+                                                                },
+                                                                "ObjectId": {
+                                                                    "type": "integer"
+                                                                },
+                                                                "ScopeVariables": {
+                                                                    "properties": {
+                                                                        "ActPos": {
+                                                                            "type": "number"
+                                                                        },
+                                                                        "ActPosError": {
+                                                                            "type": "number"
+                                                                        },
+                                                                        "ActVelo": {
+                                                                            "type": "number"
+                                                                        },
+                                                                        "ActVeloError": {
+                                                                            "type": "number"
+                                                                        },
+                                                                        "Control": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "SetAccItp": {
+                                                                            "type": "number"
+                                                                        },
+                                                                        "SetCurr": {
+                                                                            "type": "number"
+                                                                        },
+                                                                        "SetPosItp": {
+                                                                            "type": "number"
+                                                                        },
+                                                                        "SetVeloItp": {
+                                                                            "type": "number"
+                                                                        },
+                                                                        "Status": {
+                                                                            "type": "integer"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                },
+                                                                "SimulatedStartUpId": {
+                                                                    "type": "string"
+                                                                },
+                                                                "SimulatedStartUpPart": {
+                                                                    "type": "integer"
+                                                                },
+                                                                "SimulatedStartUpPosition": {
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        },
+                                                        "type": "array"
+                                                    },
+                                                    "OperationMode": {
+                                                        "type": "string"
+                                                    },
+                                                    "Parts": {
+                                                        "items": {
+                                                            "properties": {
+                                                                "Length": {
+                                                                    "type": "number"
+                                                                },
+                                                                "ModuleSide": {
+                                                                    "type": "string"
+                                                                },
+                                                                "Modules": {
+                                                                    "items": {
+                                                                        "properties": {
+                                                                            "AmplifierI2T": {
+                                                                                "items": {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                "type": "array"
+                                                                            },
+                                                                            "AuxiliaryVoltage10V": {
+                                                                                "type": "number"
+                                                                            },
+                                                                            "AuxiliaryVoltage24V": {
+                                                                                "type": "number"
+                                                                            },
+                                                                            "AuxiliaryVoltage5V": {
+                                                                                "type": "number"
+                                                                            },
+                                                                            "ChipId": {
+                                                                                "type": "number"
+                                                                            },
+                                                                            "CurrentScaling": {
+                                                                                "type": "number"
+                                                                            },
+                                                                            "DcLinkVoltage": {
+                                                                                "type": "number"
+                                                                            },
+                                                                            "DriveBtn": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "DriveControlValue": {
+                                                                                "type": "number"
+                                                                            },
+                                                                            "DriveDeviceType": {
+                                                                                "type": "number"
+                                                                            },
+                                                                            "DriveHardwareVersion": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "DriveState": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "DriveStatusValue": {
+                                                                                "type": "number"
+                                                                            },
+                                                                            "Gap": {
+                                                                                "$ref": "tchmi:general#/definitions/DOUBLE"
+                                                                            },
+                                                                            "HasDriveError": {
+                                                                                "type": "boolean"
+                                                                            },
+                                                                            "HasDriveWarning": {
+                                                                                "type": "boolean"
+                                                                            },
+                                                                            "I2TErrorLevel": {
+                                                                                "type": "number"
+                                                                            },
+                                                                            "I2TWarnLevel": {
+                                                                                "type": "integer"
+                                                                            },
+                                                                            "Length": {
+                                                                                "type": "number"
+                                                                            },
+                                                                            "MaxDcLinkVoltage": {
+                                                                                "type": "number"
+                                                                            },
+                                                                            "MaxDcLinkVoltageLast500ms": {
+                                                                                "type": "number"
+                                                                            },
+                                                                            "MaxOverallCurrentLast500ms": {
+                                                                                "type": "number"
+                                                                            },
+                                                                            "MinDcLinkVoltage": {
+                                                                                "type": "number"
+                                                                            },
+                                                                            "ModuleType": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "Name": {
+                                                                                "$ref": "tchmi:general#/definitions/String"
+                                                                            },
+                                                                            "ObjectId": {
+                                                                                "$ref": "tchmi:general#/definitions/UINT"
+                                                                            },
+                                                                            "OverallCurrent": {
+                                                                                "type": "number"
+                                                                            },
+                                                                            "PcbTemperatures": {
+                                                                                "items": {
+                                                                                    "type": "number"
+                                                                                },
+                                                                                "type": "array"
+                                                                            },
+                                                                            "TemperatureErrorLevel": {
+                                                                                "type": "number"
+                                                                            },
+                                                                            "TemperatureWarnLevel": {
+                                                                                "type": "number"
+                                                                            }
+                                                                        },
+                                                                        "type": "object"
+                                                                    },
+                                                                    "type": "array"
+                                                                },
+                                                                "Name": {
+                                                                    "$ref": "tchmi:general#/definitions/String"
+                                                                },
+                                                                "ObjectId": {
+                                                                    "$ref": "tchmi:general#/definitions/UINT"
+                                                                },
+                                                                "OriginTransform": {
+                                                                    "properties": {
+                                                                        "OffsetX": {
+                                                                            "$ref": "tchmi:general#/definitions/FLOAT"
+                                                                        },
+                                                                        "OffsetY": {
+                                                                            "$ref": "tchmi:general#/definitions/FLOAT"
+                                                                        },
+                                                                        "Rotation": {
+                                                                            "$ref": "tchmi:general#/definitions/FLOAT"
+                                                                        }
+                                                                    },
+                                                                    "type": "object"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        },
+                                                        "type": "array"
+                                                    },
+                                                    "Tracks": {
+                                                        "items": {
+                                                            "properties": {
+                                                                "Name": {
+                                                                    "type": "string"
+                                                                },
+                                                                "ObjectId": {
+                                                                    "$ref": "tchmi:general#/definitions/UINT"
+                                                                },
+                                                                "PartConfigs": {
+                                                                    "items": {
+                                                                        "properties": {
+                                                                            "ObjectId": {
+                                                                                "$ref": "tchmi:general#/definitions/UINT"
+                                                                            }
+                                                                        },
+                                                                        "type": "object"
+                                                                    },
+                                                                    "type": "array"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        },
+                                                        "type": "array"
+                                                    },
+                                                    "VersionString": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    }
+                },
+                "readOnly": true,
+                "type": "object"
+            },
+            "USEMAPPING": true
+        },
         "TcXtsHmiServerExtension.ModuleDriveStates": {
             "ACCESS": 3,
             "DOMAIN": "TcXtsHmiServerExtension",
@@ -5406,7 +6938,7 @@
             "USEMAPPING": true
         }
     },
-    "SYMBOL_COMPLEXITY_LIMIT": 100,
+    "SYMBOL_COMPLEXITY_LIMIT": 500,
     "TEMPDH": "",
     "THREADPOOLSIZE": 32,
     "UPLOADTIMEOUT": "PT20S",
@@ -5500,12 +7032,20 @@
                 "TcHmiEcDiagnostics.ListMastersOfRoute": 3,
                 "TcHmiEcDiagnostics.ListSlavesWithForcedProcessData": 3,
                 "TcHmiMdp.Diagnostics": 3,
+                "TcHmiMdp.Local.CPU.0": 3,
+                "TcHmiMdp.Local.DiskManagement.0": 3,
+                "TcHmiMdp.Local.GeneralArea": 3,
+                "TcHmiMdp.Local.Mainboard.0": 3,
+                "TcHmiMdp.Local.Memory.0": 3,
+                "TcHmiMdp.Local.NetworkInterfaceController.0": 3,
+                "TcHmiMdp.Local.TwinCAT.0": 3,
                 "TcHmiSqliteLogger.Diagnostics": 3,
                 "TcHmiUserManagement.ChangePassword": 3,
                 "TcHmiUserManagement.Disable2FA": 3,
                 "TcHmiUserManagement.Enable2FA": 3,
                 "TcHmiUserManagement.Get2FAStatus": 3,
                 "TcHmiUserManagement.GetComplexityRules": 3,
+                "TcXtsHmiServerExtension.DiagnosticData": 3,
                 "TcXtsHmiServerExtension.ModuleDriveStates": 3,
                 "TcXtsHmiServerExtension.MoverPositions": 3,
                 "TcXtsHmiServerExtension.PartTransformations": 3,

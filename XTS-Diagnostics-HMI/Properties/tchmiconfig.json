@@ -57,7 +57,14 @@
       "type": "Stylesheet"
     }
   ],
-  "userControls": [],
+  "userControls": [
+    {
+      "url": "UserControls/Module.usercontrol"
+    },
+    {
+      "url": "UserControls/Mover.usercontrol"
+    }
+  ],
   "controls": [],
   "content": [
     {
@@ -465,7 +472,7 @@
     "package": {}
   },
   "intervals": {},
-  "trigger": [],
+  "trigger": null,
   "actionTemplates": [],
   "languages": {
     "de": "Localization/de.localization",

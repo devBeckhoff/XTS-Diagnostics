@@ -15,10 +15,10 @@
       ]
     </script>
 
-    <div id="TcHmiEcDiagnostics_EtherCATDiagnostics_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiEcDiagnostics" data-tchmi-allow-zoom-and-pan="true" data-tchmi-device="Device1" data-tchmi-left="16" data-tchmi-left-unit="px" data-tchmi-toolbox-reset-view="true" data-tchmi-top="16" data-tchmi-top-unit="px" data-tchmi-right="16" data-tchmi-bottom="16">
+    <div id="TcHmiEcDiagnostics_EtherCATDiagnostics_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiEcDiagnostics" data-tchmi-allow-zoom-and-pan="true" data-tchmi-device="%ctrl%ADSDeviceSelect::SelectedText%/ctrl%" data-tchmi-left="16" data-tchmi-left-unit="px" data-tchmi-toolbox-reset-view="true" data-tchmi-top="16" data-tchmi-top-unit="px" data-tchmi-right="16" data-tchmi-bottom="16">
     </div>
   </div>
-<div id="ADSDeviceSelect" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-auto-focus-out="True" data-tchmi-combobox-text="Select" data-tchmi-height="44" data-tchmi-height-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="264" data-tchmi-width-unit="px" data-tchmi-right-unit="%" data-tchmi-right="50">
+<div id="ADSDeviceSelect" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-auto-focus-out="True" data-tchmi-combobox-text="Device1" data-tchmi-height="44" data-tchmi-height-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="264" data-tchmi-width-unit="px" data-tchmi-right-unit="%" data-tchmi-right="50" data-tchmi-selected-id="1" data-tchmi-data-height="48">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -28,5 +28,41 @@
 }
 </script>
 
+
+<script data-tchmi-target-attribute="data-tchmi-src-data" type="application/json">
+[
+  {
+    "id": 1.0,
+    "text": "Device1",
+    "value": "1"
+  },
+  {
+    "id": 2.0,
+    "text": "Device2",
+    "value": "2"
+  },
+  {
+    "id": 3.0,
+    "text": "Device3",
+    "value": "3"
+  },
+  {
+    "id": 4.0,
+    "text": "Device4",
+    "value": "4"
+  },
+  {
+    "id": 5.0,
+    "text": "Device5",
+    "value": "5"
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-2"
+]
+</script>
 </div>
 </div>

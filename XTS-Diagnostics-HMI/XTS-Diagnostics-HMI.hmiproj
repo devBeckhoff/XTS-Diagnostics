@@ -27,6 +27,7 @@
     <HmiInitial>14.3.683.1</HmiInitial>
     <HmiRecent>14.3.683.1</HmiRecent>
     <HmiServerNodeAdvancedView>False</HmiServerNodeAdvancedView>
+    <HmiServerNodeAdvancedSettingsView>True</HmiServerNodeAdvancedSettingsView>
   </PropertyGroup>
   <PropertyGroup>
     <TwinCATHmi_Tasks>$(TcHmiDirectory)\MSBuild\Beckhoff.TwinCAT.HMI.tasks</TwinCATHmi_Tasks>
@@ -122,6 +123,23 @@
   <Target Name="Clean" DependsOnTargets="$(CleanDependsOn)" />
   <Target Name="ReBuild" DependsOnTargets="Clean; Build" />
   <ItemGroup>
+    <Content Include="Server\ADS\ADS.Config.default.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UserControls\Module.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UserControls\Module.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>UserControls\Module.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="UserControls\Mover.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UserControls\Mover.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>UserControls\Mover.usercontrol</DependentUpon>
+    </Content>
     <Folder Include="Fonts\" />
     <Folder Include="Images" />
     <Folder Include="Images\Manifest" />
@@ -130,6 +148,7 @@
     <Folder Include="Imports\Videos" />
     <Folder Include="KeyboardLayouts\" />
     <Folder Include="Localization" />
+    <Folder Include="UserControls" />
     <Folder Include="Pages\" />
     <Folder Include="Pages\SystemDiagnostics\" />
     <Folder Include="Server\ADS\" />
@@ -180,6 +199,7 @@
     <Content Include="Server\ADS\ADS.Config.default.json">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Server\ADS\ADS.Config.default.json" />
     <Content Include="Server\ADS\ADS.Config.default.json" />
     <Content Include="Server\ADS\ADS.Config.remote.json">
       <SubType>Content</SubType>
