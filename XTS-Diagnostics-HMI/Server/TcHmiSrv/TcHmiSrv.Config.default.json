@@ -6938,7 +6938,7 @@
             "USEMAPPING": true
         }
     },
-    "SYMBOL_COMPLEXITY_LIMIT": 500,
+    "SYMBOL_COMPLEXITY_LIMIT": 1000,
     "TEMPDH": "",
     "THREADPOOLSIZE": 32,
     "UPLOADTIMEOUT": "PT20S",

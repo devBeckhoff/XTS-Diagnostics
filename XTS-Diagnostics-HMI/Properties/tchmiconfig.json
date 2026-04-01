@@ -9,11 +9,11 @@
   },
   "projectVersion": "1.0.0.0",
   "tcHmiServer": {
-    "websocketIntervalTime": 500,
+    "websocketIntervalTime": 750,
     "websocketTimeout": 20000,
     "websocketSystemTimeout": 60000,
-    "websocketSubscriptionMode": null,
-    "disableOptionalSystemSubscriptions": false
+    "websocketSubscriptionMode": "Change",
+    "disableOptionalSystemSubscriptions": true
   },
   "activeTheme": "Base",
   "themes": {

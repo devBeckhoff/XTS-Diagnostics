@@ -17,7 +17,7 @@
         "to_string_function",
         "to_wstring_function"
     ],
-    "NEW_HANDLES_PER_SUM_REQUEST_LIMIT": 100,
+    "NEW_HANDLES_PER_SUM_REQUEST_LIMIT": 200,
     "RESPONSE_SIZE_LIMIT": 2097152,
     "RUNTIMES": {
         "PLC1": {
@@ -26,6 +26,10 @@
             "PORT": 851,
             "READ_ONLY": false,
             "SYMBOLS": {},
+            "TMC": {
+                "DATA_SYMBOLUPANDDOWNLOAD": "",
+                "USE_TMC": false
+            },
             "USE_WHITELISTING": false
         },
         "TcSysService": {
@@ -34,13 +38,17 @@
             "PORT": 10000,
             "READ_ONLY": false,
             "SYMBOLS": {},
+            "TMC": {
+                "DATA_SYMBOLUPANDDOWNLOAD": "",
+                "USE_TMC": false
+            },
             "USE_WHITELISTING": false
         }
     },
     "RUNTIME_STATE_CHECK_INTERVAL": "PT2S",
     "RUNTIME_STATE_CHECK_TIMEOUT": "PT5S",
     "SUM_REQUEST_LIMIT": 500,
-    "TIMEOUT": "PT1S",
+    "TIMEOUT": "PT2S",
     "VISIBLE_RUNTIME_PORTS": [
         301,
         302,

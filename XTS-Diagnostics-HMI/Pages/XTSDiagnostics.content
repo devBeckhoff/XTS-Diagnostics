@@ -1,6 +1,6 @@
 <div id="XTSDiagnostics" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%">
 
-<div id="XTSDiagnosticsGrid" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-left="16" data-tchmi-left-unit="px" data-tchmi-top="64" data-tchmi-top-unit="px" data-tchmi-right="16" data-tchmi-bottom="16">
+<div id="XTSDiagnosticsGrid" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="63" data-tchmi-top-unit="px" data-tchmi-right="22" data-tchmi-bottom="17">
 
 <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
 [
@@ -17,12 +17,589 @@
   }
 ]
 </script>
-<div id="MoverDiagnostics" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Mover.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-moverdata="%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::ActiveMoverCount%/s%" data-tchmi-movertype="%s%MoverDiagData%/s%">
-</div>
-<div id="ModuleDiagnostics" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Module.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0">
-</div>
 
 
+
+<script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 1,
+    "heightMode": "Value",
+    "heightUnit": "factor",
+    "overflow": false
+  },
+  {
+    "height": 6.0,
+    "heightMode": "Value",
+    "heightUnit": "factor"
+  }
+]
+</script>
+<div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="MoverDiagnostics" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Mover.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-moverdata="%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::ActiveMoverCount%/s%" data-tchmi-movertype="%s%MoverDiagData%/s%" data-tchmi-activemovercount="%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::ActiveMoverCount|BindingErrorHandling=Ignore|BindingWriteErrorHandling=Ignore|SubscriptionMode=Poll|Interval=1000|Timeout=2000%/s%" data-tchmi-detectedmovercount="%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::DetectedMoverCount|BindingErrorHandling=Ignore|BindingWriteErrorHandling=Ignore|SubscriptionMode=Poll|Interval=1000|Timeout=2000%/s%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[0]::ScopeVariables::ActPos|SubscriptionMode=Poll|Interval=250|Timeout=2000%/s%",
+    "actions": [
+      {
+        "objectType": "SwitchCase",
+        "active": true,
+        "compare": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/UDINT",
+          "symbolExpression": "%ctrl%MoverSelector::SelectedId%/ctrl%"
+        },
+        "cases": [
+          {
+            "caseValue": {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/UDINT",
+              "value": 0
+            },
+            "actions": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::ActPos%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[0]::ScopeVariables::ActPos%/s%"
+                },
+                "asyncWait": false
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::ActVelo%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[0]::ScopeVariables::ActVelo%/s%"
+                },
+                "asyncWait": false
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::NcModuloPos%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[0]::NcModuloPos%/s%"
+                },
+                "asyncWait": false
+              }
+            ]
+          },
+          {
+            "caseValue": {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/UDINT",
+              "value": 1
+            },
+            "actions": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::ActPos%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[1]::ScopeVariables::ActPos%/s%"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::ActVelo%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[1]::ScopeVariables::ActVelo%/s%"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::NcModuloPos%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[1]::NcModuloPos%/s%"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "caseValue": {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/UDINT",
+              "value": 2
+            },
+            "actions": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::ActPos%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[2]::ScopeVariables::ActPos%/s%"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::ActVelo%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[2]::ScopeVariables::ActVelo%/s%"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::NcModuloPos%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[2]::NcModuloPos%/s%"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "caseValue": {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/UDINT",
+              "value": 3
+            },
+            "actions": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::ActPos%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[3]::ScopeVariables::ActPos%/s%"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::ActVelo%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[3]::ScopeVariables::ActVelo%/s%"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::NcModuloPos%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[3]::NcModuloPos%/s%"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "caseValue": {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/UDINT",
+              "value": 4
+            },
+            "actions": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::ActPos%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[4]::ScopeVariables::ActPos%/s%"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::ActVelo%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[4]::ScopeVariables::ActVelo%/s%"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::NcModuloPos%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[4]::NcModuloPos%/s%"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "caseValue": {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/UDINT",
+              "value": 5
+            },
+            "actions": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::ActPos%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[5]::ScopeVariables::ActPos%/s%"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::ActVelo%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[5]::ScopeVariables::ActVelo%/s%"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::NcModuloPos%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[5]::NcModuloPos%/s%"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "caseValue": {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/UDINT",
+              "value": 6
+            },
+            "actions": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::ActPos%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[6]::ScopeVariables::ActPos%/s%"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::ActVelo%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[6]::ScopeVariables::ActVelo%/s%"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%MoverDiagnostics::NcModuloPos%/ctrl%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[6]::NcModuloPos%/s%"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="ModuleDiagnostics" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="1" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Module.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::PcbTemperatures[2]|SubscriptionMode=Poll|Interval=250|Timeout=2000%/s%",
+    "actions": [
+      {
+        "objectType": "SwitchCase",
+        "active": true,
+        "compare": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/UDINT",
+          "symbolExpression": "%ctrl%ModuleSelector::SelectedId%/ctrl%"
+        },
+        "cases": [
+          {
+            "caseValue": {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/UDINT",
+              "value": 0
+            },
+            "actions": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctx%owner::AmplifierI2T%/ctx%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/Number",
+                  "symbolExpression": "%f%(%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::AmplifierI2T%/s%[0] + %s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::AmplifierI2T%/s%[1] +%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::AmplifierI2T%/s%[2] +%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::AmplifierI2T%/s%[3] +%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::AmplifierI2T%/s%[4] +%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::AmplifierI2T%/s%[5] +%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::AmplifierI2T%/s%[6] +%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::AmplifierI2T%/s%[7] +%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::AmplifierI2T%/s%[8] +%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::AmplifierI2T%/s%[9] +%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::AmplifierI2T%/s%[10] +%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::AmplifierI2T%/s%[11] +%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::AmplifierI2T%/s%[12] +%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::AmplifierI2T%/s%[13] +%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::AmplifierI2T%/s%[14])/16%/f%"
+                },
+                "asyncWait": false
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctx%owner::DCLinkVoltage%/ctx%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/Number",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::DcLinkVoltage%/s%"
+                },
+                "asyncWait": false
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctx%owner::DriveState%/ctx%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/Number",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::DriveState%/s%"
+                },
+                "asyncWait": false
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctx%owner::PCBTemperature%/ctx%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/Number",
+                  "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::PcbTemperatures[2]%/s%"
+                },
+                "asyncWait": false
+              }
+            ]
+          },
+          {
+            "caseValue": {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/UDINT",
+              "value": 1
+            },
+            "actions": []
+          },
+          {
+            "caseValue": {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/UDINT",
+              "value": 2
+            },
+            "actions": []
+          },
+          {
+            "caseValue": {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/UDINT",
+              "value": 3
+            },
+            "actions": []
+          },
+          {
+            "caseValue": {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/UDINT",
+              "value": 4
+            },
+            "actions": []
+          },
+          {
+            "caseValue": {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/UDINT",
+              "value": 5
+            },
+            "actions": []
+          },
+          {
+            "caseValue": {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/UDINT",
+              "value": 6
+            },
+            "actions": []
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="MoverSelector" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-auto-focus-out="True" data-tchmi-combobox-text="Mover 1" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="4" data-tchmi-left-unit="%" data-tchmi-top="32" data-tchmi-top-unit="%" data-tchmi-right-unit="%" data-tchmi-right="62" data-tchmi-data-height="48" data-tchmi-selected-id="0" data-tchmi-selected-index="0">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-2"
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-src-data" type="application/json">
+[
+  {
+    "id": 0.0,
+    "text": "Mover 1",
+    "value": "0"
+  },
+  {
+    "id": 1.0,
+    "text": "Mover 2",
+    "value": "1"
+  },
+  {
+    "id": 2.0,
+    "text": "Mover 3",
+    "value": "2"
+  },
+  {
+    "id": 3.0,
+    "text": "Mover 4",
+    "value": "3"
+  },
+  {
+    "id": 4.0,
+    "text": "Mover 5",
+    "value": "4"
+  },
+  {
+    "id": 5.0,
+    "text": "Mover 6",
+    "value": "5"
+  },
+  {
+    "id": 6.0,
+    "text": "Mover 7",
+    "value": "6"
+  }
+]
+</script>
+
+
+</div>
+<div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="1" id="ModuleSelector" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-auto-focus-out="True" data-tchmi-combobox-text="Module 1" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="4" data-tchmi-left-unit="%" data-tchmi-top="32" data-tchmi-top-unit="%" data-tchmi-right-unit="%" data-tchmi-right="62" data-tchmi-data-height="48" data-tchmi-selected-id="0" data-tchmi-selected-index="0">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "headline-2"
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-src-data" type="application/json">
+[
+  {
+    "id": 0.0,
+    "text": "Module 1",
+    "value": "0"
+  },
+  {
+    "id": 1.0,
+    "text": "Module 2",
+    "value": "1"
+  },
+  {
+    "id": 2.0,
+    "text": "Module 3",
+    "value": "2"
+  },
+  {
+    "id": 3.0,
+    "text": "Module 4",
+    "value": "3"
+  },
+  {
+    "id": 4.0,
+    "text": "Module 5",
+    "value": "4"
+  },
+  {
+    "id": 5.0,
+    "text": "Module 6",
+    "value": "5"
+  },
+  {
+    "id": 6.0,
+    "text": "Module 7",
+    "value": "6"
+  }
+]
+</script>
+</div>
+
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "background-container"
+]
+</script>
 </div>
 <div id="TcHmiTextblock_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="32" data-tchmi-left-unit="px" data-tchmi-text="XTS Diagnostics" data-tchmi-top="16" data-tchmi-top-unit="px" data-tchmi-word-wrap="True" data-tchmi-right="78" data-tchmi-right-unit="%">
 

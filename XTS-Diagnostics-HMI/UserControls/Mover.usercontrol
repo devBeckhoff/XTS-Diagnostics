@@ -6,50 +6,54 @@
   "background-container"
 ]
 </script>
-<div id="MoverHeader" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="25" data-tchmi-left-unit="%" data-tchmi-text="Mover Info" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="True" data-tchmi-right="25" data-tchmi-right-unit="%" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Top">
+<div id="MoverHeader" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="43" data-tchmi-left-unit="%" data-tchmi-text="Mover Info" data-tchmi-top="4" data-tchmi-top-unit="%" data-tchmi-word-wrap="True" data-tchmi-right="43" data-tchmi-right-unit="%" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center">
 
 <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
 [
   "headline-1"
 ]
 </script>
-</div>
-<div id="ActiveMoverCount_text" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="4" data-tchmi-left-unit="%" data-tchmi-text="Active Mover Count" data-tchmi-top="26" data-tchmi-top-unit="%" data-tchmi-word-wrap="True" data-tchmi-right="60" data-tchmi-right-unit="%" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Top">
-<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
-[
-  "headline-1"
-]
+
+<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+{
+  "left": 0,
+  "right": 0,
+  "top": 0,
+  "bottom": 2,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+{
+  "left": "None",
+  "right": "None",
+  "top": "None",
+  "bottom": "Solid"
+}
 </script>
 </div>
-<div id="DetectedMoverCount_text" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="4" data-tchmi-left-unit="%" data-tchmi-text="Detected Mover Count" data-tchmi-top="36" data-tchmi-top-unit="%" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Top" data-tchmi-right="60" data-tchmi-right-unit="%">
-<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
-[
-  "headline-1"
-]
+<div id="ActPosValue" data-tchmi-type="TcHmi.Controls.TcHmiExtendedControls.LabeledNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="3" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-label-word-wrap="True" data-tchmi-left="4" data-tchmi-left-unit="%" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="56" data-tchmi-top-unit="%" data-tchmi-value="%pp%ActPos%/pp%" data-tchmi-is-read-only="True" data-tchmi-right-unit="%" data-tchmi-right="20.0" data-tchmi-label="Actual Position" data-tchmi-unit="mm  " data-tchmi-label-to-input-ratio="1:1" data-tchmi-value-horizontal-alignment="Center" data-tchmi-label-horizontal-alignment="Center" data-tchmi-label-vertical-alignment="Center" data-tchmi-unit-vertical-alignment="Center" data-tchmi-label-font-size-unit="px" data-tchmi-label-font-size="26" data-tchmi-unit-font-size="26" data-tchmi-value-font-size="26" data-tchmi-unit-position="Right">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 3,
+  "right": 3,
+  "top": 3,
+  "bottom": 3,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
 </script>
+
+
+
 </div>
-<div id="NcModuloPos_text" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="4" data-tchmi-left-unit="%" data-tchmi-text="Modulo Position" data-tchmi-top="46" data-tchmi-top-unit="%" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Top" data-tchmi-right="60" data-tchmi-right-unit="%">
-<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
-[
-  "headline-1"
-]
-</script>
-</div>
-<div id="ActPos_text" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="4" data-tchmi-left-unit="%" data-tchmi-text="Actual Position" data-tchmi-top="56" data-tchmi-top-unit="%" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Top" data-tchmi-right="60" data-tchmi-right-unit="%">
-<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
-[
-  "headline-1"
-]
-</script>
-</div>
-<div id="ActVelo_text" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="4" data-tchmi-left-unit="%" data-tchmi-text="Actual Velocity" data-tchmi-top="66" data-tchmi-top-unit="%" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Top" data-tchmi-right="60" data-tchmi-right-unit="%">
-<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
-[
-  "headline-1"
-]
-</script>
-</div>
-<div id="MoverSelector" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-auto-focus-out="True" data-tchmi-combobox-text="Mover 1" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="4" data-tchmi-left-unit="%" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-right-unit="%" data-tchmi-right="60" data-tchmi-data-height="48" data-tchmi-selected-id="0" data-tchmi-selected-index="0">
+<div id="ActVeloValue" data-tchmi-type="TcHmi.Controls.TcHmiExtendedControls.LabeledNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="3" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-label-word-wrap="True" data-tchmi-left="4.0" data-tchmi-left-unit="%" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="66" data-tchmi-top-unit="%" data-tchmi-value="%pp%ActVelo%/pp%" data-tchmi-is-read-only="True" data-tchmi-right-unit="%" data-tchmi-right="20.0" data-tchmi-label="Actual Velocity" data-tchmi-unit="mm/s" data-tchmi-label-to-input-ratio="1:1" data-tchmi-value-horizontal-alignment="Center" data-tchmi-label-horizontal-alignment="Center" data-tchmi-label-vertical-alignment="Center" data-tchmi-unit-vertical-alignment="Center" data-tchmi-label-font-size-unit="px" data-tchmi-label-font-size="26" data-tchmi-unit-font-size="26" data-tchmi-value-font-size="26" data-tchmi-unit-position="Right">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -60,85 +64,45 @@
 </script>
 
 
-<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
-[
-  "headline-2"
-]
+
+</div>
+<div id="NcModuloPosValue" data-tchmi-type="TcHmi.Controls.TcHmiExtendedControls.LabeledNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="3" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-label-word-wrap="True" data-tchmi-left="4.0" data-tchmi-left-unit="%" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="46.0" data-tchmi-top-unit="%" data-tchmi-value="%pp%NcModuloPos%/pp%" data-tchmi-is-read-only="True" data-tchmi-right-unit="%" data-tchmi-right="20" data-tchmi-label="Modulo Position" data-tchmi-unit="mm  " data-tchmi-label-to-input-ratio="1:1" data-tchmi-value-horizontal-alignment="Center" data-tchmi-label-horizontal-alignment="Center" data-tchmi-label-vertical-alignment="Center" data-tchmi-unit-vertical-alignment="Center" data-tchmi-label-font-size-unit="px" data-tchmi-label-font-size="26" data-tchmi-unit-font-size="26" data-tchmi-value-font-size="26" data-tchmi-unit-position="Right">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
 </script>
 
-<script data-tchmi-target-attribute="data-tchmi-src-data" type="application/json">
-[
-  {
-    "id": 0.0,
-    "text": "Mover 1",
-    "value": "0"
-  },
-  {
-    "id": 1.0,
-    "text": "Mover 2",
-    "value": "1"
-  },
-  {
-    "id": 2.0,
-    "text": "Mover 3",
-    "value": "2"
-  },
-  {
-    "id": 3.0,
-    "text": "Mover 4",
-    "value": "3"
-  },
-  {
-    "id": 4.0,
-    "text": "Mover 5",
-    "value": "4"
-  },
-  {
-    "id": 5.0,
-    "text": "Mover 6",
-    "value": "5"
-  },
-  {
-    "id": 6.0,
-    "text": "Mover 7",
-    "value": "6"
-  }
-]
-</script>
+
+
 </div>
-<div id="ActiveMoverCount_text_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="41.0" data-tchmi-left-unit="%" data-tchmi-top="26" data-tchmi-top-unit="%" data-tchmi-word-wrap="True" data-tchmi-right="33.0" data-tchmi-right-unit="%" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Top">
-<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
-[
-  "headline-1"
-]
+<div id="DetectedMoverCount" data-tchmi-type="TcHmi.Controls.TcHmiExtendedControls.LabeledNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-label-word-wrap="True" data-tchmi-left="4.0" data-tchmi-left-unit="%" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="36.0" data-tchmi-top-unit="%" data-tchmi-value="%pp%DetectedMoverCount%/pp%" data-tchmi-is-read-only="True" data-tchmi-right-unit="%" data-tchmi-right="20" data-tchmi-label="Detected Movers" data-tchmi-unit="movers" data-tchmi-label-to-input-ratio="1:1" data-tchmi-value-horizontal-alignment="Center" data-tchmi-label-horizontal-alignment="Center" data-tchmi-label-vertical-alignment="Center" data-tchmi-unit-vertical-alignment="Center" data-tchmi-label-font-size-unit="px" data-tchmi-label-font-size="26" data-tchmi-unit-font-size="26" data-tchmi-value-font-size="26" data-tchmi-unit-position="Right">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
 </script>
+
+
+
 </div>
-<div id="DetectedMoverCount_text_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="41.0" data-tchmi-left-unit="%" data-tchmi-top="36" data-tchmi-top-unit="%" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Top" data-tchmi-right="33.0" data-tchmi-right-unit="%">
-<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
-[
-  "headline-1"
-]
+<div id="ActiveMoverCount" data-tchmi-type="TcHmi.Controls.TcHmiExtendedControls.LabeledNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-label-word-wrap="True" data-tchmi-left="4.0" data-tchmi-left-unit="%" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="26.0" data-tchmi-top-unit="%" data-tchmi-value="%pp%ActiveMoverCount%/pp%" data-tchmi-is-read-only="True" data-tchmi-right-unit="%" data-tchmi-right="20" data-tchmi-label="Active Movers" data-tchmi-unit="movers" data-tchmi-label-to-input-ratio="1:1" data-tchmi-value-horizontal-alignment="Center" data-tchmi-label-horizontal-alignment="Center" data-tchmi-label-vertical-alignment="Center" data-tchmi-unit-vertical-alignment="Center" data-tchmi-label-font-size-unit="px" data-tchmi-label-font-size="26" data-tchmi-unit-font-size="26" data-tchmi-value-font-size="26" data-tchmi-unit-position="Right">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
 </script>
-</div>
-<div id="NcModuloPos_text_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="41.0" data-tchmi-left-unit="%" data-tchmi-top="46" data-tchmi-top-unit="%" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Top" data-tchmi-right="33.0" data-tchmi-right-unit="%">
-<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
-[
-  "headline-1"
-]
-</script>
-</div>
-<div id="ActPos_text_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="41.0" data-tchmi-left-unit="%" data-tchmi-top="56" data-tchmi-top-unit="%" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Top" data-tchmi-right="33.0" data-tchmi-right-unit="%">
-<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
-[
-  "headline-1"
-]
-</script>
-</div>
-<div id="ActVelo_text_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="41.0" data-tchmi-left-unit="%" data-tchmi-top="66" data-tchmi-top-unit="%" data-tchmi-word-wrap="True" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Top" data-tchmi-right="33.0" data-tchmi-right-unit="%">
-<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
-[
-  "headline-1"
-]
-</script>
+
+
+
 </div>
 </div>

@@ -6,5 +6,5 @@
             "readOnly": false
         }
     },
-    "timeout": "PT1S"
+    "timeout": "PT2S"
 }

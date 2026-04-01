@@ -192,6 +192,7 @@
     </Content>
     <Content Include="Pages\XTSDiagnostics.content">
       <SubType>Content</SubType>
+      <Cache>False</Cache>
     </Content>
     <Content Include="Pages\XTSViewer.content">
       <SubType>Content</SubType>

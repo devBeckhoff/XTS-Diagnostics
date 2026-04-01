@@ -1,5 +1,75 @@
 {
-  "$schema": "./../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.431/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
   "parameters": [
-  ]
+    {
+      "allowSymbolExpressionsInObject": false,
+      "requiredOnCompile": false,
+      "bindable": true,
+      "propertySetterName": "setDCLinkVoltage",
+      "propertyGetterName": "getDCLinkVoltage",
+      "refTo": "",
+      "name": "data-tchmi-dclinkvoltage",
+      "displayName": "DCLinkVoltage",
+      "visible": true,
+      "type": "tchmi:general#/definitions/Number",
+      "category": "",
+      "description": "",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "DCLinkVoltage"
+    },
+    {
+      "allowSymbolExpressionsInObject": false,
+      "requiredOnCompile": false,
+      "bindable": true,
+      "propertySetterName": "setDriveState",
+      "propertyGetterName": "getDriveState",
+      "refTo": "",
+      "name": "data-tchmi-drivestate",
+      "displayName": "DriveState",
+      "visible": true,
+      "type": "tchmi:general#/definitions/String",
+      "category": "",
+      "description": "",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "DriveState"
+    },
+    {
+      "allowSymbolExpressionsInObject": false,
+      "requiredOnCompile": false,
+      "bindable": true,
+      "propertySetterName": "setPCBTemperature",
+      "propertyGetterName": "getPCBTemperature",
+      "refTo": "",
+      "name": "data-tchmi-pcbtemperature",
+      "displayName": "PCBTemperature",
+      "visible": true,
+      "type": "tchmi:general#/definitions/Number",
+      "category": "",
+      "description": "",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "PCBTemperature"
+    },
+    {
+      "allowSymbolExpressionsInObject": false,
+      "requiredOnCompile": false,
+      "bindable": true,
+      "propertySetterName": "setAmplifierI2T",
+      "propertyGetterName": "getAmplifierI2T",
+      "refTo": "",
+      "name": "data-tchmi-amplifieri2t",
+      "displayName": "AmplifierI2T",
+      "visible": true,
+      "type": "tchmi:general#/definitions/Number",
+      "category": "",
+      "description": "",
+      "readOnly": false,
+      "heritable": true,
+      "propertyName": "AmplifierI2T"
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.431/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
 }
