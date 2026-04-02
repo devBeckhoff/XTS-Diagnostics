@@ -226,6 +226,54 @@
 
 
 
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onSelectionChanged",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.Custom.CreateIndirectArrayBinding",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:framework#/definitions/Control",
+            "symbolExpression": "%ctrl%MoverDiagnostics%/ctrl%"
+          },
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+            "value": "ActPos"
+          },
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[0]::ScopeVariables::ActPos%/s%"
+          },
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%ctx%owner::SelectedValue%/ctx%"
+          },
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:general#/definitions/Boolean",
+            "value": false
+          },
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:general#/definitions/String",
+            "value": "onUserInteractionFinished"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
 </div>
 <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="1" id="ModuleSelector" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-auto-focus-out="True" data-tchmi-combobox-text="Module 1" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="4" data-tchmi-left-unit="%" data-tchmi-top="32" data-tchmi-top-unit="%" data-tchmi-right-unit="%" data-tchmi-right="62" data-tchmi-data-height="48" data-tchmi-selected-id="0" data-tchmi-selected-index="0">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">

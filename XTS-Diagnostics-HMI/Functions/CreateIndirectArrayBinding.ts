@@ -21,7 +21,12 @@ module TcHmi {
                 let symbStr: string = Symbol.getExpression().toString().slice(0,-4);
 
                 // append array index
-                symbStr = symbStr + '[' + Index.toString() + ']';
+                // symbStr = symbStr + '[' + Index.toString() + ']';
+
+                // regex based replace for last [] in string
+                symbStr = symbStr.replace(/\[\d+\](?!.*\[\d+\])/, '[' + Index.toString() + ']');
+                // \[\d+\] matches a bracket wrapped int
+                // (?!.*\[\d+\]) only matches if no other [] follows in the string
 
                 // append two-way binding
                 if (IsTwoWay) {
