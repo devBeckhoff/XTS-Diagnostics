@@ -55,6 +55,11 @@
       "name": "Fonts/Fonts.css",
       "description": "",
       "type": "Stylesheet"
+    },
+    {
+      "name": "Functions/CreateIndirectArrayBinding.js",
+      "description": "",
+      "type": "JavaScript"
     }
   ],
   "userControls": [
@@ -125,7 +130,11 @@
       "preloadBindings": false
     }
   ],
-  "userFunctions": [],
+  "userFunctions": [
+    {
+      "url": "Functions/CreateIndirectArrayBinding.js"
+    }
+  ],
   "symbols": {
     "internal": {
       "MediaQueryList": {

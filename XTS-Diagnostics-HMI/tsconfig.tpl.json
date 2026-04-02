@@ -5,10 +5,18 @@
     "module": "none",
     "target": "ES2022",
     "skipLibCheck": true,
-    "lib": [ "DOM", "DOM.Iterable", "ES2023" ],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2023"
+    ],
     "paths": {
-      "Beckhoff.TwinCAT.HMI.Framework/*": [ "./$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/*" ],
-      "Beckhoff.TwinCAT.HMI.Framework": [ "./$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/index.esm.d.ts" ]
+      "Beckhoff.TwinCAT.HMI.Framework/*": [
+        "./$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/*"
+      ],
+      "Beckhoff.TwinCAT.HMI.Framework": [
+        "./$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/index.esm.d.ts"
+      ]
     },
     "types": [],
     "declaration": true,
@@ -27,5 +35,8 @@
   ],
   "include": [
     "$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/TcHmi.d.ts"
+  ],
+  "files": [
+    "Functions/CreateIndirectArrayBinding.ts"
   ]
 }

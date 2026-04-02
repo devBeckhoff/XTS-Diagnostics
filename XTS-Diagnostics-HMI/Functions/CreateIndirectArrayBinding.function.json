@@ -1,0 +1,91 @@
+{
+  "function": {
+    "name": "CreateIndirectArrayBinding",
+    "namespace": "TcHmi.Functions.Custom",
+    "displayName": "CreateIndirectArrayBinding",
+    "description": "",
+    "waitMode": "Synchronous",
+    "category": "Binding",
+    "returnValue": {
+      "type": "tchmi:general#/definitions/VOID"
+    },
+    "visible": true,
+    "injectContextObject": false,
+    "arguments": [
+      {
+        "name": "Control",
+        "displayName": "Control",
+        "type": "tchmi:framework#/definitions/Control",
+        "description": "",
+        "defaultValue": "",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      },
+      {
+        "name": "Property",
+        "displayName": "Property",
+        "type": "tchmi:framework#/definitions/ControlPropertyName",
+        "description": "",
+        "defaultValue": "",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false,
+        "refTo": "Control"
+      },
+      {
+        "name": "Symbol",
+        "displayName": "Symbol",
+        "type": "tchmi:framework#/definitions/Symbol",
+        "description": "",
+        "defaultValue": "",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      },
+      {
+        "name": "Index",
+        "displayName": "Index",
+        "type": "tchmi:general#/definitions/Number",
+        "description": "",
+        "defaultValue": "",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      },
+      {
+        "name": "IsTwoWay",
+        "displayName": "IsTwoWay",
+        "type": "tchmi:general#/definitions/Boolean",
+        "description": "",
+        "defaultValue": "False",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      },
+      {
+        "name": "BindingEvent",
+        "displayName": "BindingEvent",
+        "type": "tchmi:general#/definitions/String",
+        "description": "",
+        "defaultValue": "onUserInteractionFinished",
+        "required": true,
+        "bindable": true,
+        "restParameter": false,
+        "asReference": false,
+        "allowControlAttributeBindingOptions": false
+      }
+    ]
+  },
+  "$schema": "../.hmiframework/Schema/FunctionDescription.Schema.json"
+}

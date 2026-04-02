@@ -6,19 +6,15 @@
   "background-container"
 ]
 </script>
-<div id="ModuleHeader" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="41" data-tchmi-left-unit="%" data-tchmi-text="Module Info" data-tchmi-top="4" data-tchmi-top-unit="%" data-tchmi-word-wrap="True" data-tchmi-right="41" data-tchmi-right-unit="%" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center">
-<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
-[
-  "headline-1"
-]
-</script>
+<div id="ModuleHeader" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="8" data-tchmi-height-unit="%" data-tchmi-left="38" data-tchmi-left-unit="%" data-tchmi-text="Module Info" data-tchmi-top="4" data-tchmi-top-unit="%" data-tchmi-word-wrap="True" data-tchmi-right="38" data-tchmi-right-unit="%" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Bottom" data-tchmi-text-font-size="%f%0.5*%ctrl%ModuleHeader::RenderedHeight%/ctrl%%/f%">
+
 
 <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
 {
   "left": 0,
   "right": 0,
   "top": 0,
-  "bottom": 2,
+  "bottom": 1,
   "leftUnit": "px",
   "rightUnit": "px",
   "topUnit": "px",
@@ -35,7 +31,24 @@
 }
 </script>
 </div>
-<div id="AmplifierI2T" data-tchmi-type="TcHmi.Controls.TcHmiExtendedControls.LabeledNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-label-word-wrap="True" data-tchmi-left="4.0" data-tchmi-left-unit="%" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="36" data-tchmi-top-unit="%" data-tchmi-is-read-only="True" data-tchmi-right-unit="%" data-tchmi-right="20" data-tchmi-label="Coil Temperature" data-tchmi-unit="C" data-tchmi-label-to-input-ratio="1:1" data-tchmi-value-horizontal-alignment="Center" data-tchmi-label-horizontal-alignment="Center" data-tchmi-label-vertical-alignment="Center" data-tchmi-unit-vertical-alignment="Center" data-tchmi-label-font-size-unit="px" data-tchmi-label-font-size="26" data-tchmi-unit-font-size="26" data-tchmi-value-font-size="26" data-tchmi-unit-position="Right" data-tchmi-value="%pp%AmplifierI2T%/pp%">
+<div id="AmplifierI2T" data-tchmi-type="TcHmi.Controls.TcHmiExtendedControls.LabeledNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="0" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-label-word-wrap="True" data-tchmi-left="8" data-tchmi-left-unit="%" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="36" data-tchmi-top-unit="%" data-tchmi-is-read-only="True" data-tchmi-right-unit="%" data-tchmi-right="8" data-tchmi-label="Coil Temperature" data-tchmi-unit="C" data-tchmi-label-to-input-ratio="1:1" data-tchmi-value-horizontal-alignment="Center" data-tchmi-label-horizontal-alignment="Center" data-tchmi-label-vertical-alignment="Center" data-tchmi-unit-vertical-alignment="Center" data-tchmi-unit-font-size="%f%0.80*%ctrl%AmplifierI2T::RenderedHeight%/ctrl%%/f%" data-tchmi-value-font-size="%f%0.80*%ctrl%AmplifierI2T::RenderedHeight%/ctrl%%/f%" data-tchmi-unit-position="Right" data-tchmi-value="%pp%AmplifierI2T%/pp%" data-tchmi-label-font-size="%f%0.80*%ctrl%AmplifierI2T::RenderedHeight%/ctrl%%/f%">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 3,
+  "right": 3,
+  "top": 3,
+  "bottom": 3,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+
+
+</div>
+<div id="PCBTemperature" data-tchmi-type="TcHmi.Controls.TcHmiExtendedControls.LabeledNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="2" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-label-word-wrap="True" data-tchmi-left="8" data-tchmi-left-unit="%" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="46" data-tchmi-top-unit="%" data-tchmi-is-read-only="True" data-tchmi-right-unit="%" data-tchmi-right="8" data-tchmi-label="PCB Temperature" data-tchmi-unit="C" data-tchmi-label-to-input-ratio="1:1" data-tchmi-value-horizontal-alignment="Center" data-tchmi-label-horizontal-alignment="Center" data-tchmi-label-vertical-alignment="Center" data-tchmi-unit-vertical-alignment="Center" data-tchmi-label-font-size-unit="px" data-tchmi-label-font-size="%f%0.8*%ctrl%PCBTemperature::RenderedHeight%/ctrl%%/f%" data-tchmi-unit-font-size="%f%0.8*%ctrl%PCBTemperature::RenderedHeight%/ctrl%%/f%" data-tchmi-value-font-size="%f%0.8*%ctrl%PCBTemperature::RenderedHeight%/ctrl%%/f%" data-tchmi-unit-position="Right" data-tchmi-value="%pp%PCBTemperature%/pp%">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -48,7 +61,7 @@
 
 
 </div>
-<div id="PCBTemperature" data-tchmi-type="TcHmi.Controls.TcHmiExtendedControls.LabeledNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="2" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-label-word-wrap="True" data-tchmi-left="4.0" data-tchmi-left-unit="%" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="46" data-tchmi-top-unit="%" data-tchmi-is-read-only="True" data-tchmi-right-unit="%" data-tchmi-right="20" data-tchmi-label="PCB Temperature" data-tchmi-unit="C" data-tchmi-label-to-input-ratio="1:1" data-tchmi-value-horizontal-alignment="Center" data-tchmi-label-horizontal-alignment="Center" data-tchmi-label-vertical-alignment="Center" data-tchmi-unit-vertical-alignment="Center" data-tchmi-label-font-size-unit="px" data-tchmi-label-font-size="26" data-tchmi-unit-font-size="26" data-tchmi-value-font-size="26" data-tchmi-unit-position="Right" data-tchmi-value="%pp%PCBTemperature%/pp%">
+<div id="DCLinkVoltage" data-tchmi-type="TcHmi.Controls.TcHmiExtendedControls.LabeledNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="2" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-label-word-wrap="True" data-tchmi-left="8" data-tchmi-left-unit="%" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="56" data-tchmi-top-unit="%" data-tchmi-is-read-only="True" data-tchmi-right-unit="%" data-tchmi-right="8" data-tchmi-label="DC Link Voltage" data-tchmi-unit="V" data-tchmi-label-to-input-ratio="1:1" data-tchmi-value-horizontal-alignment="Center" data-tchmi-label-horizontal-alignment="Center" data-tchmi-label-vertical-alignment="Center" data-tchmi-unit-vertical-alignment="Center" data-tchmi-label-font-size-unit="px" data-tchmi-label-font-size="%f%0.8*%ctrl%DCLinkVoltage::RenderedHeight%/ctrl%%/f%" data-tchmi-unit-font-size="%f%0.8*%ctrl%DCLinkVoltage::RenderedHeight%/ctrl%%/f%" data-tchmi-value-font-size="%f%0.8*%ctrl%DCLinkVoltage::RenderedHeight%/ctrl%%/f%" data-tchmi-unit-position="Right" data-tchmi-value="%pp%DCLinkVoltage%/pp%">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -61,20 +74,7 @@
 
 
 </div>
-<div id="DCLinkVoltage" data-tchmi-type="TcHmi.Controls.TcHmiExtendedControls.LabeledNumericInput" data-tchmi-auto-focus-out="True" data-tchmi-decimal-digits="2" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-label-word-wrap="True" data-tchmi-left="4.0" data-tchmi-left-unit="%" data-tchmi-reset-to-last-valid-value="True" data-tchmi-top="56" data-tchmi-top-unit="%" data-tchmi-is-read-only="True" data-tchmi-right-unit="%" data-tchmi-right="20" data-tchmi-label="DC Link Voltage" data-tchmi-unit="V" data-tchmi-label-to-input-ratio="1:1" data-tchmi-value-horizontal-alignment="Center" data-tchmi-label-horizontal-alignment="Center" data-tchmi-label-vertical-alignment="Center" data-tchmi-unit-vertical-alignment="Center" data-tchmi-label-font-size-unit="px" data-tchmi-label-font-size="26" data-tchmi-unit-font-size="26" data-tchmi-value-font-size="26" data-tchmi-unit-position="Right" data-tchmi-value="%pp%DCLinkVoltage%/pp%">
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "top": 3,
-  "right": 3,
-  "bottom": 3,
-  "left": 3
-}
-</script>
-
-
-
-</div>
-<div id="DriveState" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="4" data-tchmi-left-unit="%" data-tchmi-text="%f%&quot;Drive State: &quot;+ %pp%DriveState%/pp%%/f%" data-tchmi-top="26" data-tchmi-top-unit="%" data-tchmi-word-wrap="True" data-tchmi-right-unit="%" data-tchmi-right="20" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
+<div id="DriveState" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="8" data-tchmi-left-unit="%" data-tchmi-text="%f%&quot;Drive State: &quot;+ %pp%DriveState%/pp%%/f%" data-tchmi-top="26" data-tchmi-top-unit="%" data-tchmi-word-wrap="True" data-tchmi-right-unit="%" data-tchmi-right="8" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="%f%0.8*%ctrl%DriveState::RenderedHeight%/ctrl%%/f%">
 
 <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
 [

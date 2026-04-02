@@ -123,6 +123,13 @@
   <Target Name="Clean" DependsOnTargets="$(CleanDependsOn)" />
   <Target Name="ReBuild" DependsOnTargets="Clean; Build" />
   <ItemGroup>
+    <Content Include="Functions\CreateIndirectArrayBinding.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Functions\CreateIndirectArrayBinding.ts</DependentUpon>
+    </Content>
+    <Content Include="Functions\CreateIndirectArrayBinding.ts">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Server\ADS\ADS.Config.default.json">
       <SubType>Content</SubType>
     </Content>
@@ -148,6 +155,7 @@
     <Folder Include="Imports\Videos" />
     <Folder Include="KeyboardLayouts\" />
     <Folder Include="Localization" />
+    <Folder Include="Functions" />
     <Folder Include="UserControls" />
     <Folder Include="Pages\" />
     <Folder Include="Pages\SystemDiagnostics\" />
