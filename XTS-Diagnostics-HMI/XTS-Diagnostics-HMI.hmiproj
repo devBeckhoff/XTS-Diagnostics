@@ -133,6 +133,8 @@
     <Content Include="Server\ADS\ADS.Config.default.json">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Server\ADS\ADS.Config.default.json" />
+    <Content Include="Server\ADS\ADS.Config.remote.json" />
     <Content Include="UserControls\Module.usercontrol">
       <SubType>Content</SubType>
     </Content>
