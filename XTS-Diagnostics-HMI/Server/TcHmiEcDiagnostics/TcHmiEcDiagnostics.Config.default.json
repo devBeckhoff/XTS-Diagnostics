@@ -29,7 +29,7 @@
     "runtimeStateCheckTimeout": "PT5S",
     "updateIntervals": {
         "MasterList": 1000,
-        "MasterOnlineInfo": 300,
+        "MasterOnlineInfo": 1000,
         "ProcessDataValues": 1000,
         "Slaves": 1000,
         "SlavesOnlineInfo": 1000

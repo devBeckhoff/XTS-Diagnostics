@@ -35,7 +35,7 @@
   }
 ]
 </script>
-<div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="MoverDiagnostics" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Mover.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-moverdata="%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::ActiveMoverCount%/s%" data-tchmi-movertype="%s%MoverDiagData%/s%" data-tchmi-right-unit="%" data-tchmi-bottom-unit="%" data-tchmi-activemovercount="%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::ActiveMoverCount|BindingErrorHandling=Ignore|BindingWriteErrorHandling=Ignore|SubscriptionMode=Poll|Interval=4000|Timeout=6000%/s%" data-tchmi-detectedmovercount="%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::DetectedMoverCount|BindingErrorHandling=Ignore|BindingWriteErrorHandling=Ignore|SubscriptionMode=Poll|Interval=4000|Timeout=6000%/s%">
+<div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="MoverDiagnostics" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Mover.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-moverdata="%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::ActiveMoverCount%/s%" data-tchmi-movertype="%s%MoverDiagData%/s%" data-tchmi-right-unit="%" data-tchmi-bottom-unit="%" data-tchmi-activemovercount="%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::ActiveMoverCount%/s%" data-tchmi-detectedmovercount="%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::DetectedMoverCount%/s%">
 
 
 </div>
@@ -132,7 +132,7 @@
           },
           {
             "objectType": "Symbol",
-            "valueType": "tchmi:general#/definitions/String",
+            "valueType": "tchmi:general#/definitions/Number",
             "symbolExpression": "%ctx%owner::SelectedValue%/ctx%"
           },
           {
@@ -146,7 +146,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": true
+        "asyncWait": false
       },
       {
         "objectType": "Function",
@@ -169,7 +169,7 @@
           },
           {
             "objectType": "Symbol",
-            "valueType": "tchmi:general#/definitions/String",
+            "valueType": "tchmi:general#/definitions/Number",
             "symbolExpression": "%ctx%owner::SelectedValue%/ctx%"
           },
           {
@@ -183,7 +183,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": true
+        "asyncWait": false
       },
       {
         "objectType": "Function",
@@ -206,7 +206,7 @@
           },
           {
             "objectType": "Symbol",
-            "valueType": "tchmi:general#/definitions/String",
+            "valueType": "tchmi:general#/definitions/Number",
             "symbolExpression": "%ctx%owner::SelectedValue%/ctx%"
           },
           {
@@ -220,7 +220,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": true
+        "asyncWait": false
       }
     ]
   },
@@ -262,7 +262,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": true
+        "asyncWait": false
       },
       {
         "objectType": "Function",
@@ -299,7 +299,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": true
+        "asyncWait": false
       },
       {
         "objectType": "Function",
@@ -336,7 +336,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": true
+        "asyncWait": false
       }
     ]
   }
@@ -465,7 +465,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": true
+        "asyncWait": false
       },
       {
         "objectType": "Function",
@@ -502,7 +502,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": true
+        "asyncWait": false
       },
       {
         "objectType": "Function",
@@ -539,7 +539,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": true
+        "asyncWait": false
       },
       {
         "objectType": "Function",
@@ -558,7 +558,6 @@
           },
           {
             "objectType": "Symbol",
-            "valueType": "tchmi:general#/definitions/String",
             "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::PcbTemperatures%/s%"
           },
           {
@@ -577,7 +576,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": true
+        "asyncWait": false
       }
     ]
   },
@@ -619,7 +618,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": true
+        "asyncWait": false
       },
       {
         "objectType": "Function",
@@ -656,7 +655,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": true
+        "asyncWait": false
       },
       {
         "objectType": "Function",
@@ -693,7 +692,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": true
+        "asyncWait": false
       },
       {
         "objectType": "Function",
@@ -730,7 +729,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": true
+        "asyncWait": false
       }
     ]
   }

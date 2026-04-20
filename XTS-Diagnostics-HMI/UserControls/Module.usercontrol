@@ -88,16 +88,12 @@
 
 
 
-<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
-{
-  "color": "rgba(237, 237, 237, 1)"
-}
-</script>
+
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
   {
-    "event": "%ctrl%TcHmiThemeSelect_Settings_Theme::BackgroundColor%/ctrl%",
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onAttached",
     "actions": [
       {
         "objectType": "SwitchCase",
@@ -167,17 +163,9 @@
 ]
 </script>
 
-<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
-{
-  "color": "rgba(255, 255, 255, 1)"
-}
-</script>
 
-<script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
-{
-  "color": "rgba(215, 215, 217, 1)"
-}
-</script>
+
+
 
 <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
 {
@@ -204,7 +192,7 @@
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
   {
-    "event": "%ctrl%TcHmiThemeSelect_Settings_Theme::BackgroundColor%/ctrl%",
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onAttached",
     "actions": [
       {
         "objectType": "SwitchCase",

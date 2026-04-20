@@ -2,8 +2,28 @@
     "devices": {
         "Device1": {
             "enabled": true,
-            "masterNetId": "0.0.0.0.2.1",
-            "targetNetId": "0.0.0.0.1.1"
+            "masterNetId": "5.93.160.170.2.1",
+            "targetNetId": "127.0.0.1.1.1"
+        },
+        "Device2": {
+            "enabled": true,
+            "masterNetId": "5.93.160.170.13.1",
+            "targetNetId": "127.0.0.1.1.1"
+        },
+        "Device3": {
+            "enabled": true,
+            "masterNetId": "5.93.160.170.14.1",
+            "targetNetId": "127.0.0.1.1.1"
+        },
+        "Device4": {
+            "enabled": true,
+            "masterNetId": "5.93.160.170.15.1",
+            "targetNetId": "127.0.0.1.1.1"
+        },
+        "Device5": {
+            "enabled": true,
+            "masterNetId": "5.93.160.170.16.1",
+            "targetNetId": "127.0.0.1.1.1"
         }
     }
 }
