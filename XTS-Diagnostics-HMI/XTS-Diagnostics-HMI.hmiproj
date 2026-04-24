@@ -130,6 +130,9 @@
     <Content Include="Functions\CreateIndirectArrayBinding.ts">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Functions\RefreshMapping.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Server\ADS\ADS.Config.default.json">
       <SubType>Content</SubType>
     </Content>

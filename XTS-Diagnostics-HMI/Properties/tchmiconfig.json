@@ -60,6 +60,11 @@
       "name": "Functions/CreateIndirectArrayBinding.js",
       "description": "",
       "type": "JavaScript"
+    },
+    {
+      "name": "Functions/RefreshMapping.js",
+      "description": "",
+      "type": "JavaScript"
     }
   ],
   "userControls": [

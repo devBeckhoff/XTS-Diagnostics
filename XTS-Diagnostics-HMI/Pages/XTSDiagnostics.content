@@ -35,7 +35,7 @@
   }
 ]
 </script>
-<div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="MoverDiagnostics" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Mover.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-moverdata="%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::ActiveMoverCount%/s%" data-tchmi-movertype="%s%MoverDiagData%/s%" data-tchmi-right-unit="%" data-tchmi-bottom-unit="%" data-tchmi-activemovercount="%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::ActiveMoverCount%/s%" data-tchmi-detectedmovercount="%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::DetectedMoverCount%/s%">
+<div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="MoverDiagnostics" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Mover.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-moverdata="%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::ActiveMoverCount%/s%" data-tchmi-movertype="%s%MoverDiagData%/s%" data-tchmi-right-unit="%" data-tchmi-bottom-unit="%">
 
 
 </div>
@@ -143,10 +143,10 @@
           {
             "objectType": "StaticValue",
             "valueType": "tchmi:general#/definitions/String",
-            "value": "onUserInteractionFinished"
+            "value": "onSelectionChanged"
           }
         ],
-        "asyncWait": false
+        "asyncWait": true
       },
       {
         "objectType": "Function",
@@ -180,10 +180,10 @@
           {
             "objectType": "StaticValue",
             "valueType": "tchmi:general#/definitions/String",
-            "value": "onUserInteractionFinished"
+            "value": "onSelectionChanged"
           }
         ],
-        "asyncWait": false
+        "asyncWait": true
       },
       {
         "objectType": "Function",
@@ -217,10 +217,32 @@
           {
             "objectType": "StaticValue",
             "valueType": "tchmi:general#/definitions/String",
-            "value": "onUserInteractionFinished"
+            "value": "onSelectionChanged"
           }
         ],
-        "asyncWait": false
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%MoverDiagnostics::ActiveMoverCount%/ctrl%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/INT",
+          "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::ActiveMoverCount%/s%"
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%MoverDiagnostics::DetectedMoverCount%/ctrl%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/INT",
+          "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::DetectedMoverCount%/s%"
+        },
+        "asyncWait": true
       }
     ]
   },
@@ -262,7 +284,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": false
+        "asyncWait": true
       },
       {
         "objectType": "Function",
@@ -299,7 +321,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": false
+        "asyncWait": true
       },
       {
         "objectType": "Function",
@@ -336,7 +358,29 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": false
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%MoverDiagnostics::ActiveMoverCount%/ctrl%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/INT",
+          "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::ActiveMoverCount%/s%"
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%MoverDiagnostics::DetectedMoverCount%/ctrl%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/INT",
+          "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::DetectedMoverCount%/s%"
+        },
+        "asyncWait": true
       }
     ]
   }
@@ -462,10 +506,10 @@
           {
             "objectType": "StaticValue",
             "valueType": "tchmi:general#/definitions/String",
-            "value": "onUserInteractionFinished"
+            "value": "onSelectionChanged"
           }
         ],
-        "asyncWait": false
+        "asyncWait": true
       },
       {
         "objectType": "Function",
@@ -499,10 +543,10 @@
           {
             "objectType": "StaticValue",
             "valueType": "tchmi:general#/definitions/String",
-            "value": "onUserInteractionFinished"
+            "value": "onSelectionChanged"
           }
         ],
-        "asyncWait": false
+        "asyncWait": true
       },
       {
         "objectType": "Function",
@@ -536,10 +580,10 @@
           {
             "objectType": "StaticValue",
             "valueType": "tchmi:general#/definitions/String",
-            "value": "onUserInteractionFinished"
+            "value": "onSelectionChanged"
           }
         ],
-        "asyncWait": false
+        "asyncWait": true
       },
       {
         "objectType": "Function",
@@ -573,10 +617,10 @@
           {
             "objectType": "StaticValue",
             "valueType": "tchmi:general#/definitions/String",
-            "value": "onUserInteractionFinished"
+            "value": "onSelectionChanged"
           }
         ],
-        "asyncWait": false
+        "asyncWait": true
       }
     ]
   },
@@ -618,7 +662,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": false
+        "asyncWait": true
       },
       {
         "objectType": "Function",
@@ -655,7 +699,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": false
+        "asyncWait": true
       },
       {
         "objectType": "Function",
@@ -692,7 +736,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": false
+        "asyncWait": true
       },
       {
         "objectType": "Function",
@@ -729,7 +773,7 @@
             "value": "onUserInteractionFinished"
           }
         ],
-        "asyncWait": false
+        "asyncWait": true
       }
     ]
   }
