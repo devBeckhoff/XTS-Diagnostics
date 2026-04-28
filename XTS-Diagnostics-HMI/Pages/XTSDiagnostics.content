@@ -381,6 +381,19 @@
           "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::DetectedMoverCount%/s%"
         },
         "asyncWait": true
+      },
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.Beckhoff.StartInterval",
+        "fnParams": [
+          {
+            "objectType": "StaticValue",
+            "valueType": "tchmi:framework#/definitions/Interval",
+            "value": "resubscribeSymbols"
+          }
+        ],
+        "asyncWait": true
       }
     ]
   }

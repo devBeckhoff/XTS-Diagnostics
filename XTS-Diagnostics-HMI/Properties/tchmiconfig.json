@@ -485,7 +485,456 @@
     "timer": {},
     "package": {}
   },
-  "intervals": {},
+  "intervals": {
+    "resubscribeSymbols": {
+      "interval": 10000,
+      "actions": [
+        {
+          "objectType": "Function",
+          "active": true,
+          "fn": "TcHmi.Functions.Beckhoff.RemoveBinding",
+          "fnParams": [
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:framework#/definitions/Control",
+              "symbolExpression": "%ctrl%MoverDiagnostics%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+              "value": "ActiveMoverCount"
+            }
+          ],
+          "asyncWait": true
+        },
+        {
+          "objectType": "Function",
+          "active": true,
+          "fn": "TcHmi.Functions.Beckhoff.RemoveBinding",
+          "fnParams": [
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:framework#/definitions/Control",
+              "symbolExpression": "%ctrl%MoverDiagnostics%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+              "value": "ActPos"
+            }
+          ],
+          "asyncWait": true
+        },
+        {
+          "objectType": "Function",
+          "active": true,
+          "fn": "TcHmi.Functions.Beckhoff.RemoveBinding",
+          "fnParams": [
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:framework#/definitions/Control",
+              "symbolExpression": "%ctrl%MoverDiagnostics%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+              "value": "ActVelo"
+            }
+          ],
+          "asyncWait": true
+        },
+        {
+          "objectType": "Function",
+          "active": true,
+          "fn": "TcHmi.Functions.Beckhoff.RemoveBinding",
+          "fnParams": [
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:framework#/definitions/Control",
+              "symbolExpression": "%ctrl%MoverDiagnostics%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+              "value": "DetectedMoverCount"
+            }
+          ],
+          "asyncWait": true
+        },
+        {
+          "objectType": "Function",
+          "active": true,
+          "fn": "TcHmi.Functions.Beckhoff.RemoveBinding",
+          "fnParams": [
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:framework#/definitions/Control",
+              "symbolExpression": "%ctrl%MoverDiagnostics%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+              "value": "NcModuloPos"
+            }
+          ],
+          "asyncWait": true
+        },
+        {
+          "objectType": "Function",
+          "active": true,
+          "fn": "TcHmi.Functions.Beckhoff.RemoveBinding",
+          "fnParams": [
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:framework#/definitions/Control",
+              "symbolExpression": "%ctrl%ModuleDiagnostics%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+              "value": "AmplifierI2T"
+            }
+          ],
+          "asyncWait": true
+        },
+        {
+          "objectType": "Function",
+          "active": true,
+          "fn": "TcHmi.Functions.Beckhoff.RemoveBinding",
+          "fnParams": [
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:framework#/definitions/Control",
+              "symbolExpression": "%ctrl%ModuleDiagnostics%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+              "value": "DCLinkVoltage"
+            }
+          ],
+          "asyncWait": true
+        },
+        {
+          "objectType": "Function",
+          "active": true,
+          "fn": "TcHmi.Functions.Beckhoff.RemoveBinding",
+          "fnParams": [
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:framework#/definitions/Control",
+              "symbolExpression": "%ctrl%ModuleDiagnostics%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+              "value": "DriveState"
+            }
+          ],
+          "asyncWait": true
+        },
+        {
+          "objectType": "Function",
+          "active": true,
+          "fn": "TcHmi.Functions.Beckhoff.RemoveBinding",
+          "fnParams": [
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:framework#/definitions/Control",
+              "symbolExpression": "%ctrl%ModuleDiagnostics%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+              "value": "PCBTemperature"
+            }
+          ],
+          "asyncWait": true
+        },
+        {
+          "objectType": "Function",
+          "active": true,
+          "fn": "TcHmi.Functions.Custom.CreateIndirectArrayBinding",
+          "fnParams": [
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:framework#/definitions/Control",
+              "symbolExpression": "%ctrl%MoverDiagnostics%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+              "value": "ActPos"
+            },
+            {
+              "objectType": "Symbol",
+              "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[0]::ScopeVariables::ActPos%/s%"
+            },
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:general#/definitions/Number",
+              "symbolExpression": "%ctrl%MoverSelector::SelectedValue%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/Boolean",
+              "value": false
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/String",
+              "value": "onSelectionChanged"
+            }
+          ],
+          "asyncWait": true
+        },
+        {
+          "objectType": "Function",
+          "active": true,
+          "fn": "TcHmi.Functions.Custom.CreateIndirectArrayBinding",
+          "fnParams": [
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:framework#/definitions/Control",
+              "symbolExpression": "%ctrl%MoverDiagnostics%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+              "value": "ActVelo"
+            },
+            {
+              "objectType": "Symbol",
+              "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[0]::ScopeVariables::ActVelo%/s%"
+            },
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:general#/definitions/Number",
+              "symbolExpression": "%ctrl%MoverSelector::SelectedValue%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/Boolean",
+              "value": false
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/String",
+              "value": "onSelectionChanged"
+            }
+          ],
+          "asyncWait": true
+        },
+        {
+          "objectType": "Function",
+          "active": true,
+          "fn": "TcHmi.Functions.Custom.CreateIndirectArrayBinding",
+          "fnParams": [
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:framework#/definitions/Control",
+              "symbolExpression": "%ctrl%MoverDiagnostics%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+              "value": "NcModuloPos"
+            },
+            {
+              "objectType": "Symbol",
+              "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Movers[0]::NcModuloPos%/s%"
+            },
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:general#/definitions/Number",
+              "symbolExpression": "%ctrl%MoverSelector::SelectedValue%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/Boolean",
+              "value": false
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/String",
+              "value": "onSelectionChanged"
+            }
+          ],
+          "asyncWait": true
+        },
+        {
+          "objectType": "WriteToSymbol",
+          "active": true,
+          "symbolExpression": "%ctrl%MoverDiagnostics::ActiveMoverCount%/ctrl%",
+          "value": {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/INT",
+            "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::ActiveMoverCount%/s%"
+          },
+          "asyncWait": true
+        },
+        {
+          "objectType": "WriteToSymbol",
+          "active": true,
+          "symbolExpression": "%ctrl%MoverDiagnostics::DetectedMoverCount%/ctrl%",
+          "value": {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/INT",
+            "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::DetectedMoverCount%/s%"
+          },
+          "asyncWait": true
+        },
+        {
+          "objectType": "Function",
+          "active": true,
+          "fn": "TcHmi.Functions.Custom.CreateIndirectArrayBinding",
+          "fnParams": [
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:framework#/definitions/Control",
+              "symbolExpression": "%ctrl%ModuleDiagnostics%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+              "value": "AmplifierI2T"
+            },
+            {
+              "objectType": "Symbol",
+              "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::AmplifierI2T%/s%"
+            },
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:general#/definitions/Number",
+              "symbolExpression": "%ctrl%ModuleSelector::SelectedValue%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/Boolean",
+              "value": false
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/String",
+              "value": "onSelectionChanged"
+            }
+          ],
+          "asyncWait": true
+        },
+        {
+          "objectType": "Function",
+          "active": true,
+          "fn": "TcHmi.Functions.Custom.CreateIndirectArrayBinding",
+          "fnParams": [
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:framework#/definitions/Control",
+              "symbolExpression": "%ctrl%ModuleDiagnostics%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+              "value": "DCLinkVoltage"
+            },
+            {
+              "objectType": "Symbol",
+              "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::DcLinkVoltage%/s%"
+            },
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:general#/definitions/Number",
+              "symbolExpression": "%ctrl%ModuleSelector::SelectedValue%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/Boolean",
+              "value": false
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/String",
+              "value": "onSelectionChanged"
+            }
+          ],
+          "asyncWait": true
+        },
+        {
+          "objectType": "Function",
+          "active": true,
+          "fn": "TcHmi.Functions.Custom.CreateIndirectArrayBinding",
+          "fnParams": [
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:framework#/definitions/Control",
+              "symbolExpression": "%ctrl%ModuleDiagnostics%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+              "value": "DriveState"
+            },
+            {
+              "objectType": "Symbol",
+              "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::DriveState%/s%"
+            },
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:general#/definitions/Number",
+              "symbolExpression": "%ctrl%ModuleSelector::SelectedValue%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/Boolean",
+              "value": false
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/String",
+              "value": "onSelectionChanged"
+            }
+          ],
+          "asyncWait": true
+        },
+        {
+          "objectType": "Function",
+          "active": true,
+          "fn": "TcHmi.Functions.Custom.CreateIndirectArrayBinding",
+          "fnParams": [
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:framework#/definitions/Control",
+              "symbolExpression": "%ctrl%ModuleDiagnostics%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:framework#/definitions/ControlPropertyName",
+              "value": "PCBTemperature"
+            },
+            {
+              "objectType": "Symbol",
+              "symbolExpression": "%s%TcXtsHmiServerExtension.DiagnosticData::Targets[0]::System::ProcessingUnits[0]::Parts[0]::Modules[0]::PcbTemperatures%/s%"
+            },
+            {
+              "objectType": "Symbol",
+              "valueType": "tchmi:general#/definitions/Number",
+              "symbolExpression": "%ctrl%ModuleSelector::SelectedValue%/ctrl%"
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/Boolean",
+              "value": false
+            },
+            {
+              "objectType": "StaticValue",
+              "valueType": "tchmi:general#/definitions/String",
+              "value": "onSelectionChanged"
+            }
+          ],
+          "asyncWait": true
+        }
+      ]
+    }
+  },
   "trigger": [],
   "actionTemplates": [],
   "languages": {

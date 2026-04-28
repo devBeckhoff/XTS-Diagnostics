@@ -10,7 +10,7 @@
     <AvailablePlatforms>TwinCAT HMI</AvailablePlatforms>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <HmiTitle>XTS_Diagnostics_HMI</HmiTitle>
-    <HmiVerboseLevel>2</HmiVerboseLevel>
+    <HmiVerboseLevel>3</HmiVerboseLevel>
     <HmiVersion>1.0.0.0</HmiVersion>
     <HmiCommunicationServerPort>3000</HmiCommunicationServerPort>
     <HmiLogTcHmiServerMessages>false</HmiLogTcHmiServerMessages>
@@ -27,7 +27,7 @@
     <HmiInitial>14.3.683.1</HmiInitial>
     <HmiRecent>14.3.683.1</HmiRecent>
     <HmiServerNodeAdvancedView>False</HmiServerNodeAdvancedView>
-    <HmiServerNodeAdvancedSettingsView>False</HmiServerNodeAdvancedSettingsView>
+    <HmiServerNodeAdvancedSettingsView>True</HmiServerNodeAdvancedSettingsView>
   </PropertyGroup>
   <PropertyGroup>
     <TwinCATHmi_Tasks>$(TcHmiDirectory)\MSBuild\Beckhoff.TwinCAT.HMI.tasks</TwinCATHmi_Tasks>
@@ -128,9 +128,6 @@
       <DependentUpon>Functions\CreateIndirectArrayBinding.ts</DependentUpon>
     </Content>
     <Content Include="Functions\CreateIndirectArrayBinding.ts">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Functions\RefreshMapping.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\ADS\ADS.Config.default.json">
